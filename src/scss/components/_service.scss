@@ -1,0 +1,57 @@
+@use "../abstracts/variables" as vars;
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 60px;
+    background-color: vars.$color-tertiary-light;
+    padding: 45px;
+    border-radius: 20px;
+
+    &--dark {
+        background-color: vars.$color-secondary;
+
+        .service {
+            &__icon {
+                background-color: vars.$color-tertiary;
+
+                svg {
+                    stroke: vars.$color-secondary;
+                }
+            }
+
+            &__title,
+            &__text {
+                color: vars.$color-tertiary;
+            }
+        }
+    }
+
+    &__icon {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: vars.$color-secondary;
+        border-radius: 50%;
+
+        svg {
+            width: 32px;
+            height: 32px;
+            stroke: vars.$color-tertiary;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    &__title {
+        font-size: 25px;
+        font-weight: 500;
+    }
+}
