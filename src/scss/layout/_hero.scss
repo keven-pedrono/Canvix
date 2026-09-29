@@ -1,0 +1,115 @@
+@use "../abstracts/variables" as vars;
+@use "sass:color";
+
+.hero {
+    position: relative;
+    background-color: vars.$color-secondary;
+    background-image: url("../../assets/images/hero-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-block: 145px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 183px;
+        height: 192px;
+        top: 185px;
+        left: -40px;
+        background-image: url("../../assets/images/hero-ornament.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 650px 750px;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        row-gap: 180px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        width: min(610px, 100%);
+    }
+
+    &__cta {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        width: min(650px, 100%);
+    }
+
+    &__illustration {
+        justify-self: end;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        div {
+            width: 750px;
+            height: 750px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid color.change(vars.$color-primary, $alpha: 0.4);
+            border-radius: 50%;
+            overflow: hidden;
+
+            > div {
+                width: 650px;
+                height: 650px;
+                border: 2px solid
+                    color.change(vars.$color-tertiary-light, $alpha: 0.4);
+            }
+        }
+
+        img {
+            width: 550px;
+            height: 550px;
+        }
+    }
+
+    &__title {
+        font-size: vars.$font-title-2;
+        line-height: 1.15;
+        color: vars.$color-tertiary;
+
+        span {
+            color: vars.$color-primary;
+        }
+    }
+
+    &__text {
+        width: min(560px, 100%);
+        color: vars.$color-tertiary;
+    }
+
+    &__button {
+        align-self: start;
+    }
+
+    &__brands {
+        font-size: vars.$font-title-5;
+        color: vars.$color-primary;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        column-gap: 45px;
+    }
+
+    &__link {
+    }
+}

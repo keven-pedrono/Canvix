@@ -23,7 +23,7 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: vars.$line-height-text;
-    color: vars.$color-primary;
+    color: vars.$color-text;
 }
 
 // Titles
@@ -65,8 +65,9 @@ h6 {
 
 // Text
 p {
-    font-size: vars.$font-text;
+    font-size: vars.$font-title-6;
     line-height: vars.$line-height-text;
+    letter-spacing: 3%;
     margin: 0;
 }
 

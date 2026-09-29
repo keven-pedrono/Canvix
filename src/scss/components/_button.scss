@@ -1,0 +1,54 @@
+@use "../abstracts/variables" as vars;
+
+.button {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-size: vars.$font-title-5;
+    color: vars.$color-tertiary;
+    background-color: vars.$color-secondary;
+    padding-block: 10px;
+    padding-inline: 10px 20px;
+    border-radius: 20px;
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+
+    &:hover,
+    &:focus-visible {
+        color: vars.$color-text;
+        background-color: vars.$color-primary;
+
+        svg path {
+            stroke: vars.$color-primary;
+        }
+    }
+
+    &--secondary {
+        color: vars.$color-text;
+        background-color: vars.$color-tertiary;
+    }
+
+    &--header {
+        color: vars.$color-text;
+        background-color: vars.$color-tertiary;
+        padding-block: 12.5px;
+        padding-inline: 15px;
+        border-radius: 25px;
+    }
+
+    svg {
+        width: 28px;
+        height: 28px;
+
+        circle {
+            fill: vars.$color-secondary;
+            transition: fill 0.3s ease;
+        }
+
+        path {
+            stroke: vars.$color-tertiary;
+            transition: stroke 0.3s ease;
+        }
+    }
+}
