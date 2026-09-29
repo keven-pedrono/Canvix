@@ -58,7 +58,7 @@
 
     <section class="services">
         <div class="services__container container">
-            <div class="section-header section-header--big">
+            <div class="section-header section-header--big section-header--center">
                 <h2 class="section-header__title">Our Services</h2>
                 <h3 class="section-header__subtitle">High-impact services for your business</h3>
             </div>
@@ -145,6 +145,58 @@
                         <p class="service__text">It involves creating a unique and recognizable identity that sets the brand apart from competitors and resonates with the target audience.</p>
                     </div>
                 </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="about__container container">
+            <div class="about__illustrations">
+                <div class="about__illustration">
+                    <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/about-illustration-1.png')); ?>" alt="">
+                </div>
+
+                <div class="about__illustration">
+                    <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/about-illustration-2.png')); ?>" alt="">
+                </div>
+
+                <div class="about__illustration">
+                    <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/about-illustration-3.png')); ?>" alt="">
+                </div>
+            </div>
+
+            <div class="about__content">
+                <div class="section-header section-header--light section-header--small">
+                    <h2 class="section-header__title">About us</h2>
+                    <h3 class="section-header__subtitle">The core mission behind all our work</h3>
+                </div>
+
+                <p class="about__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit metus ut tortor purus tincidunt sed lectus ut eros, turpis tincidunt id.
+                </p>
+
+                <div class="about__numbers">
+                    <div class="about__number">
+                        <span>330 +</span>
+
+                        <p>Companies helped</p>
+                    </div>
+
+                    <div class="about__number">
+                        <span>230 +</span>
+
+                        <p>Revenue generated</p>
+                    </div>
+                </div>
+
+                <a href="/" class="hero__button button button--secondary">
+                    <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="14" cy="14" r="14"/>
+                        <path d="M12 9L16.6667 13.6667L12 18.3333" stroke-width="1.55439" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    Start your Free Trial
+                </a>
             </div>
         </div>
     </section>

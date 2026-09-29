@@ -3,7 +3,6 @@
 .section-header {
     display: flex;
     flex-direction: column;
-    align-items: center;
     row-gap: 25px;
 
     &--light {
@@ -24,16 +23,24 @@
         width: min(580px, 100%);
     }
 
+    &--center {
+        align-items: center;
+        .section-header {
+            &__title,
+            &__subtitle {
+                text-align: center;
+            }
+        }
+    }
+
     &__title {
         font-size: vars.$font-title-4;
         line-height: 1.15;
         color: vars.$color-primary;
-        text-align: center;
     }
 
     &__subtitle {
         font-size: vars.$font-title-2;
         line-height: 1.15;
-        text-align: center;
     }
 }
