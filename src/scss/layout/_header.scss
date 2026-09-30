@@ -12,6 +12,15 @@
         .header__logo {
             color: vars.$color-tertiary;
 
+            &:hover,
+            &:focus-visible {
+                color: vars.$color-primary;
+
+                svg {
+                    fill: vars.$color-primary;
+                }
+            }
+
             svg {
                 fill: vars.$color-tertiary;
             }
@@ -19,6 +28,11 @@
 
         .menu__list a {
             color: vars.$color-tertiary;
+
+            &:hover,
+            &:focus-visible {
+                color: vars.$color-primary;
+            }
         }
     }
 
@@ -34,11 +48,13 @@
         column-gap: 10px;
         font-family: vars.$font-headings;
         font-size: vars.$font-title-4;
+        transition: color 0.3s ease;
 
         svg {
             width: 40px;
             height: 40px;
             fill: vars.$color-secondary;
+            transition: fill 0.3s ease;
         }
     }
 }
@@ -51,6 +67,7 @@
 
         a {
             font-size: vars.$font-title-5;
+            transition: color 0.3s ease;
         }
     }
 }

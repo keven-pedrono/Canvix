@@ -19,8 +19,14 @@
         color: vars.$color-text;
         background-color: vars.$color-primary;
 
-        svg path {
-            stroke: vars.$color-primary;
+        svg {
+            circle {
+                fill: vars.$color-secondary;
+            }
+
+            path {
+                stroke: vars.$color-tertiary;
+            }
         }
     }
 

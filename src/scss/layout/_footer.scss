@@ -26,6 +26,7 @@
         max-width: 350px;
         display: flex;
         flex-direction: column;
+        align-items: start;
         row-gap: 25px;
     }
 
@@ -36,11 +37,22 @@
         font-family: vars.$font-headings;
         font-size: 38px;
         color: vars.$color-tertiary;
+        transition: color 0.3s ease;
+
+        &:hover,
+        &:focus-visible {
+            color: vars.$color-primary;
+
+            svg {
+                fill: vars.$color-primary;
+            }
+        }
 
         svg {
             width: 52px;
             height: 52px;
             fill: vars.$color-tertiary;
+            transition: fill 0.3s ease;
         }
     }
 

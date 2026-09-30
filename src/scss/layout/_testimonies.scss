@@ -43,6 +43,10 @@
                 &:focus-visible {
                     background-color: vars.$color-primary;
                     border-color: vars.$color-primary;
+
+                    svg {
+                        stroke: vars.$color-secondary;
+                    }
                 }
             }
 
@@ -56,6 +60,7 @@
                 width: 20px;
                 height: 20px;
                 stroke: vars.$color-tertiary;
+                transition: stroke 0.3s ease;
             }
         }
     }

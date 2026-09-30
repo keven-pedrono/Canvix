@@ -7,6 +7,22 @@
     flex-direction: column;
     row-gap: 12.5px;
 
+    &:hover,
+    &:focus {
+        .project__illustration {
+            &::before {
+                background-color: color.change(
+                    vars.$color-secondary,
+                    $alpha: 0.1
+                );
+            }
+
+            img {
+                transform: scale(1.15);
+            }
+        }
+    }
+
     &__illustration {
         position: relative;
         width: 100%;
@@ -21,10 +37,13 @@
             width: 100%;
             height: 100%;
             background-color: color.change(vars.$color-secondary, $alpha: 0.4);
+            z-index: 1;
+            transition: background-color 0.3s ease;
         }
 
         img {
             width: 100%;
+            transition: transform 0.3s ease;
         }
     }
 
