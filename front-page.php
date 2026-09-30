@@ -285,6 +285,77 @@
             </ol>
         </div>
     </section>
+
+    <section class="projects">
+        <div class="projects__container container">
+            <h3 class="projects__title title">Recent Showcase</h3>
+
+            <div class="projects__content">
+                <a href="/" class="projects__button button">
+                    <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="14" cy="14" r="14"/>
+                        <path d="M12 9L16.6667 13.6667L12 18.3333" stroke-width="1.55439" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    Start your Free Trial
+                </a>
+
+                <ul class="projects__list">
+                    <li class="projects__item">
+                        <a href="" class="project">
+                            <div class="project__illustration">
+                                <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/project-web.png')); ?>" alt="">
+                            </div>
+
+                            <div class="project__content">
+                                <h4 class="project__title">Web UI design</h4>
+                                <p class="project__text">Creative  UI design</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="projects__item">
+                        <a href="" class="project">
+                            <div class="project__illustration">
+                                <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/project-strategy.png')); ?>" alt="">
+                            </div>
+
+                            <div class="project__content">
+                                <h4 class="project__title">To design Digital Strategy</h4>
+                                <p class="project__text">Social Media Marketing</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="projects__item">
+                        <a href="" class="project">
+                            <div class="project__illustration">
+                                <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/project-design.png')); ?>" alt="">
+                            </div>
+
+                            <div class="project__content">
+                                <h4 class="project__title">UI Design</h4>
+                                <p class="project__text">Creative Rebranding for logo</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="projects__item">
+                        <a href="" class="project">
+                            <div class="project__illustration">
+                                <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/project-ui.png')); ?>" alt="">
+                            </div>
+
+                            <div class="project__content">
+                                <h4 class="project__title">UI Design</h4>
+                                <p class="project__text">Creative Rebranding for logo</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>

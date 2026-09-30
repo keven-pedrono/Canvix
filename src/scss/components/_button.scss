@@ -24,9 +24,34 @@
         }
     }
 
+    svg {
+        width: 28px;
+        height: 28px;
+
+        circle {
+            fill: vars.$color-tertiary;
+            transition: fill 0.3s ease;
+        }
+
+        path {
+            stroke: vars.$color-secondary;
+            transition: stroke 0.3s ease;
+        }
+    }
+
     &--secondary {
         color: vars.$color-text;
         background-color: vars.$color-tertiary;
+
+        svg {
+            circle {
+                fill: vars.$color-secondary;
+            }
+
+            path {
+                stroke: vars.$color-tertiary;
+            }
+        }
     }
 
     &--header {
@@ -35,20 +60,5 @@
         padding-block: 12.5px;
         padding-inline: 15px;
         border-radius: 25px;
-    }
-
-    svg {
-        width: 28px;
-        height: 28px;
-
-        circle {
-            fill: vars.$color-secondary;
-            transition: fill 0.3s ease;
-        }
-
-        path {
-            stroke: vars.$color-tertiary;
-            transition: stroke 0.3s ease;
-        }
     }
 }

@@ -4,6 +4,7 @@
 @use "components/button";
 @use "components/title";
 @use "components/service";
+@use "components/project";
 
 @use "layout/container";
 @use "layout/header";
@@ -11,4 +12,5 @@
 @use "layout/services";
 @use "layout/aboutus";
 @use "layout/process";
+@use "layout/projects";
 @use "layout/footer";
