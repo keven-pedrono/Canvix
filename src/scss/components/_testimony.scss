@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as vars;
+
+.testimony {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 35px;
+
+    &__photo {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    &__quote {
+        font-family: vars.$font-headings;
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__infos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+    }
+
+    &__name {
+        font-size: vars.$font-title-5;
+    }
+
+    &__position {
+        font-size: vars.$font-medium;
+    }
+}

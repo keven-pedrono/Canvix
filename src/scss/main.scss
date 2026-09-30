@@ -5,6 +5,7 @@
 @use "components/title";
 @use "components/service";
 @use "components/project";
+@use "components/testimony";
 
 @use "layout/container";
 @use "layout/header";
@@ -13,4 +14,5 @@
 @use "layout/aboutus";
 @use "layout/process";
 @use "layout/projects";
+@use "layout/testimonies";
 @use "layout/footer";

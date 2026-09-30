@@ -1,0 +1,62 @@
+@use "../abstracts/variables" as vars;
+
+.testimonies {
+    margin-block-start: 100px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        background-color: vars.$color-tertiary-light;
+        padding: 45px;
+        border-radius: 20px;
+    }
+
+    &__pagination {
+        display: flex;
+        column-gap: 10px;
+
+        button {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: vars.$color-secondary;
+            border: 1px solid vars.$color-secondary;
+            border-radius: 50%;
+            transition:
+                background-color 0.3s ease,
+                border-color 0.3s ease;
+
+            &:disabled {
+                background-color: vars.$color-tertiary-light;
+
+                svg {
+                    stroke: vars.$color-secondary;
+                }
+            }
+
+            &:not(:disabled) {
+                &:hover,
+                &:focus-visible {
+                    background-color: vars.$color-primary;
+                    border-color: vars.$color-primary;
+                }
+            }
+
+            &:first-child {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+                stroke: vars.$color-tertiary;
+            }
+        }
+    }
+}

@@ -356,6 +356,50 @@
             </div>
         </div>
     </section>
+
+    <section class="testimonies">
+        <div class="testimonies__container container">
+            <ul id="testimonials-slider" class="testimonies__list"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Testimonials"
+            tabindex="0">
+                <li class="testimonies__item">
+                    <div class="testimony">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/project-web.png')); ?>" alt="" class="testimony__photo">
+
+                        <blockquote class="testimony__quote">“Be genuine in your assessment, and provide constructive feedback to benefit both potential customers and the company providing the product or service.”</blockquote>
+
+                        <div class="testimony__infos">
+                            <h2 class="testimony__name">Jacqueline Miller</h2>
+                            <p class="testimony__position">CEO of an eduport</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="testimonies__pagination">
+                <button type="button"
+                aria-label="Previous testimonial"
+                aria-controls="testimonials-slider"
+                data-slider-control="previous"
+                disabled>
+                    <svg viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.833008 0.833496L8.23856 8.23905L0.833008 15.6446" stroke-opacity="0.9" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <button type="button"
+                aria-label="Next testimonial"
+                aria-controls="testimonials-slider"
+                data-slider-control="next">
+                    <svg viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.833008 0.833496L8.23856 8.23905L0.833008 15.6446" stroke-opacity="0.9" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>
