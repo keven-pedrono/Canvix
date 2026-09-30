@@ -200,6 +200,91 @@
             </div>
         </div>
     </section>
+
+    <section class="process">
+        <div class="process__container container">
+            <div class="section-header section-header--center section-header--medium">
+                <h2 class="section-header__title">Process</h2>
+                <h3 class="section-header__subtitle">Process that moves things forward</h3>
+            </div>
+
+            <ol class="process__steps">
+                <li class="process__step">
+                    <article class="step">
+                        <div class="step__header">
+                            <span class="step__icon">
+                                <svg viewBox="0 0 32 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.2386 35.1278H8.50527M23.2386 35.1278V37.5833C23.2386 39.8716 23.2386 41.0158 22.8648 41.9183C22.3663 43.1217 21.4103 44.0777 20.2069 44.5762C19.3044 44.95 18.1602 44.95 15.8719 44.95C13.5836 44.95 12.4395 44.95 11.537 44.5762C10.3336 44.0777 9.37756 43.1217 8.87911 41.9183C8.50527 41.0158 8.50527 39.8716 8.50527 37.5833V35.1278M23.2386 35.1278V32.6543C23.2386 31.8677 23.4859 31.101 23.9455 30.4626L28.1211 24.6632C35.3098 14.6789 28.1749 0.75 15.8719 0.75C3.56897 0.75 -3.5659 14.6789 3.62278 24.6632L7.79836 30.4626C8.25798 31.101 8.50527 31.8677 8.50527 32.6543V35.1278M12.1886 21.6222L15.8719 27.7611L19.5553 21.6222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+
+                            <h2 class="step__title">Ideate</h2>
+                        </div>
+
+                        <p class="step__text">The ideation process is a crucial phase in the design process where creative thinking and brainstorming</p>
+
+                        <span class="step__arrow">
+                        </span>
+                    </article>
+                </li>
+
+                <li class="process__step">
+                    <article class="step">
+                        <div class="step__header">
+                            <span class="step__icon">
+                                <svg viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.75 14.9208C0.75 10.519 0.75 8.31805 1.46913 6.58193C2.42796 4.26709 4.26709 2.42796 6.58193 1.46913C8.31805 0.75 10.519 0.75 14.9208 0.75H20.5892C24.991 0.75 27.1919 0.75 28.9281 1.46913C31.2429 2.42796 33.082 4.26709 34.0409 6.58193C34.76 8.31805 34.76 10.519 34.76 14.9208C34.76 19.3227 34.76 21.5236 34.0409 23.2597C33.082 25.5746 31.2429 27.4137 28.9281 28.3725C27.1919 29.0917 24.991 29.0917 20.5892 29.0917H14.9208C10.519 29.0917 8.31805 29.0917 6.58193 28.3725C4.26709 27.4137 2.42796 25.5746 1.46913 23.2597C0.75 21.5236 0.75 19.3227 0.75 14.9208Z" stroke-width="1.5" stroke-linejoin="round"/>
+                                    <path d="M0.75 7.36304L7.31554 12.4693C11.755 15.9221 13.9748 17.6485 16.5104 17.9856C17.337 18.0955 18.1745 18.0955 19.0011 17.9856C21.5367 17.6483 23.7563 15.9218 28.1957 12.4689L34.76 7.36304" stroke-width="1.5" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+
+                            <h2 class="step__title">Research</h2>
+                        </div>
+
+                        <p class="step__text">Research is a critical component of the design process, helping designers understand the problem</p>
+
+                        <span class="step__arrow">
+                        </span>
+                    </article>
+                </li>
+
+                <li class="process__step">
+                    <article class="step">
+                        <div class="step__header">
+                            <span class="step__icon">
+                                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.75 5.28597H4.04889M4.04889 5.28597C4.04889 7.79112 6.07971 9.82194 8.58486 9.82194C11.09 9.82194 13.1208 7.79112 13.1208 5.28597M4.04889 5.28597C4.04889 2.78082 6.07971 0.75 8.58486 0.75C11.09 0.75 13.1208 2.78082 13.1208 5.28597M13.1208 5.28597L30.44 5.28597M0.75 25.904H4.04889M4.04889 25.904C4.04889 23.3989 6.07971 21.3681 8.58486 21.3681C11.09 21.3681 13.1208 23.3989 13.1208 25.904M4.04889 25.904C4.04889 28.4092 6.07971 30.44 8.58486 30.44C11.09 30.44 13.1208 28.4092 13.1208 25.904M13.1208 25.904L30.44 25.904M30.44 15.595H27.1411M27.1411 15.595C27.1411 18.1001 25.1103 20.131 22.6051 20.131C20.1 20.131 18.0692 18.1001 18.0692 15.595M27.1411 15.595C27.1411 13.0899 25.1103 11.059 22.6051 11.059C20.1 11.059 18.0692 13.0899 18.0692 15.595M18.0692 15.595L0.75 15.595" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+
+                            <h2 class="step__title">Create</h2>
+                        </div>
+
+                        <p class="step__text">Designing a process involves several key steps to ensure clarity, efficiency, successfull implementation</p>
+
+                        <span class="step__arrow">
+                        </span>
+                    </article>
+                </li>
+
+                <li class="process__step">
+                    <article class="step">
+                        <div class="step__header">
+                            <span class="step__icon">
+                                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.7809 11.6182L10.1832 18.216L7.29662 15.3295M24.2034 14.0924L17.6057 20.6902L15.9562 19.0407M30.587 15.7419C30.587 23.9405 23.9406 30.5869 15.742 30.5869C7.54331 30.5869 0.896973 23.9405 0.896973 15.7419C0.896973 7.54318 7.54331 0.896851 15.742 0.896851C23.9406 0.896851 30.587 7.54318 30.587 15.7419Z" stroke-width="1.7936" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+
+                            <h2 class="step__title">Testing</h2>
+                        </div>
+
+                        <p class="step__text">Testing is a crucial phase in the design process to ensure that the product or system meets the specified requirements</p>
+                    </article>
+                </li>
+            </ol>
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>

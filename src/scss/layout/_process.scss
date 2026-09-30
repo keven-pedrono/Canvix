@@ -1,0 +1,99 @@
+@use "../abstracts/variables" as vars;
+
+.process {
+    padding-block-start: 110px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 130px;
+    }
+
+    &__steps {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        justify-content: space-between;
+    }
+
+    &__step {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.step {
+    position: relative;
+    padding-block: 75px 35px;
+    padding-inline: 35px 20px;
+    border: 3px solid vars.$color-tertiary-light;
+    border-radius: 30px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -3px;
+        width: 3px;
+        height: 50%;
+        background-color: vars.$color-tertiary;
+    }
+
+    &__header {
+        position: absolute;
+        top: -35px;
+        left: 70px;
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        background-color: vars.$color-tertiary;
+        padding-inline-end: 15px;
+        z-index: 1;
+    }
+
+    &__icon {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: vars.$color-secondary;
+        border-radius: 50%;
+
+        svg {
+            width: 30px;
+            height: 42px;
+            stroke: vars.$color-tertiary;
+        }
+    }
+
+    &__title {
+        font-size: vars.$font-title-4;
+    }
+
+    &__text {
+        font-size: vars.$font-medium;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        width: 70px;
+        height: 3px;
+        background-color: vars.$color-tertiary-light;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            border-block-start: 3px solid vars.$color-tertiary-light;
+            border-inline-end: 3px solid vars.$color-tertiary-light;
+            transform: translateY(-50%) rotate(45deg);
+        }
+    }
+}
