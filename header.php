@@ -42,8 +42,8 @@
                 ?>
             </nav>
 
-            <a href="/" class="header__cta button button--header">
-                Get in touch
+            <a href="<?php echo esc_url(get_theme_mod('canvix_header_cta_url', home_url('/'))); ?>" class="header__cta button button--header">
+                <?php echo esc_html(get_theme_mod('canvix_header_cta_label', 'Get in touch')); ?>
             </a>
         </div>
     </header>

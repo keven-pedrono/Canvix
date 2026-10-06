@@ -1,47 +1,93 @@
-<?php get_header(); ?>
+<?php
+get_header();
+?>
 
 <main class="main">
 	<section class="hero">
+    <?php
+    $hero_fields = function_exists('get_fields') ? get_fields() : [];
+    $hero_fields = is_array($hero_fields) ? $hero_fields : [];
+
+    $hero_title_before = $hero_fields['hero_title_before'] ?? 'Ready to take your';
+    $hero_title_highlight = $hero_fields['hero_title_highlight'] ?? 'Business Growth';
+    $hero_title_after = $hero_fields['hero_title_after'] ?? 'to the next level?';
+    $hero_description = $hero_fields['hero_description'] ?? 'Lorem ipsum dolor sit amet, consectetur adipiscing elit- et ut massa libero egestas malesuada viverra gravida libero cursus nulla leo pulvinar.';
+    $hero_button = $hero_fields['hero_button'] ?? [];
+    $hero_button = is_array($hero_button) ? $hero_button : [];
+    $hero_brands_title = $hero_fields['hero_brands_title'] ?? 'Trusted by Leading Brands';
+    $hero_illustration_id = absint($hero_fields['hero_illustration'] ?? 0);
+
+    ?>
         <div class="hero__container container">
             <div class="hero__wrap">
                 <div class="hero__content">
                     <h1 class="hero__title">
-                    Ready to take your
-                    <span>Business Growth</span>
-                    to the next level?
+                        <?php echo esc_html($hero_title_before); ?>
+                        <span><?php echo esc_html($hero_title_highlight); ?></span>
+                        <?php echo esc_html($hero_title_after); ?>
                     </h1>
 
-                    <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit- et ut massa libero egestas malesuada viverra gravida libero cursus nulla leo pulvinar.</p>
+                    <p class="hero__text"><?php echo esc_html($hero_description); ?></p>
 
-                    <a href="/" class="hero__button button button--secondary">
+                    <a
+                        href="<?php echo esc_url($hero_button['url'] ?? home_url('/')); ?>"
+                        class="hero__button button button--secondary"
+                        <?php if (!empty($hero_button['target'])) : ?>
+                            target="<?php echo esc_attr($hero_button['target']); ?>"
+                        <?php endif; ?>>
                         <svg aria-hidden="true" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="14" cy="14" r="14"/>
                             <path d="M12 9L16.6667 13.6667L12 18.3333" stroke-width="1.55439" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
 
-                        Start your Free Trial
+                        <?php echo esc_html($hero_button['title'] ?? 'Start your Free Trial'); ?>
                     </a>
                 </div>
 
                 <div class="hero__cta">
-                    <h2 class="hero__brands">Trusted by Leading Brands</h2>
+                    <h2 class="hero__brands"><?php echo esc_html($hero_brands_title); ?></h2>
 
                     <div class="hero__links">
-                        <a href="/" target="_blank" class="hero__link">
-                            <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/greenish.png')); ?>" alt="Greenish">
-                        </a>
+                    <?php
+                    for ($brand_number = 1; $brand_number <= 4; $brand_number++) :
+                        $brand_show_key = 'hero_brand_' . $brand_number . '_show';
+                        $brand_image_key = 'hero_brand_' . $brand_number . '_image';
+                        $brand_name_key = 'hero_brand_' . $brand_number . '_name';
+                        $brand_link_key = 'hero_brand_' . $brand_number . '_link';
 
-                        <a href="/" target="_blank" class="hero__link">
-                            <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/automation.png')); ?>" alt="Automation">
-                        </a>
+                        $brand_show = array_key_exists($brand_show_key, $hero_fields)
+                            ? (bool) $hero_fields[$brand_show_key]
+                            : true;
 
-                        <a href="/" target="_blank" class="hero__link">
-                            <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/leafe.png')); ?>" alt="Leafe">
-                        </a>
+                        $brand_image_id = absint($hero_fields[$brand_image_key] ?? 0);
+                        $brand_name = $hero_fields[$brand_name_key] ?? '';
+                        $brand_link = $hero_fields[$brand_link_key] ?? [];
+                        $brand_link = is_array($brand_link) ? $brand_link : [];
+                        $brand_url = $brand_link['url'] ?? '';
+                        $brand_target = $brand_link['target'] ?? '';
 
-                        <a href="/" target="_blank" class="hero__link">
-                            <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/mindfulness.png')); ?>" alt="Mindfulness">
-                        </a>
+                        if (!$brand_show || !$brand_image_id) {
+                            continue;
+                        }
+                        ?>
+                            <?php if ($brand_url) : ?>
+                            <a
+                                href="<?php echo esc_url($brand_url); ?>"
+                                class="hero__link"
+                                <?php if ($brand_target) : ?>
+                                    target="<?php echo esc_attr($brand_target); ?>"
+                                    <?php if ($brand_target === '_blank') : ?>
+                                        rel="noopener noreferrer"
+                                    <?php endif; ?>
+                                <?php endif; ?>
+                            >
+                                <?php echo wp_get_attachment_image($brand_image_id, 'full', false, ['alt' => $brand_name]); ?>
+                            </a>
+
+                            <?php else : ?>
+                                <?php echo wp_get_attachment_image($brand_image_id, 'full', false, ['alt' => $brand_name]); ?>
+                            <?php endif; ?>
+                    <?php endfor; ?>
                     </div>
                 </div>
             </div>
@@ -49,7 +95,11 @@
             <div class="hero__illustration">
                 <div>
                     <div>
-                        <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/hero-illustration.png')); ?>" alt="">
+                        <?php if ($hero_illustration_id) : ?>
+                            <?php echo wp_get_attachment_image($hero_illustration_id, 'full', false, ['alt' => '']); ?>
+                        <?php else : ?>
+                            <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/hero-illustration.png')); ?>" alt="">
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

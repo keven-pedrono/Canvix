@@ -1,6 +1,6 @@
 <?php
 
-function portfolio_theme_setup() {
+function canvix_theme_setup() {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
 
@@ -9,22 +9,54 @@ function portfolio_theme_setup() {
     ]);
 }
 
-add_action('after_setup_theme', 'portfolio_theme_setup');
+add_action('after_setup_theme', 'canvix_theme_setup');
 
 
-function portfolio_theme_assets() {
+function canvix_customize_register($wp_customize) {
+    $wp_customize->add_section('canvix_header_cta', [
+        'title'    => 'Bouton du header',
+        'priority' => 30,
+    ]);
+
+    $wp_customize->add_setting('canvix_header_cta_label', [
+        'default'           => 'Get in touch',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+
+    $wp_customize->add_control('canvix_header_cta_label', [
+        'label'   => 'Texte du bouton',
+        'section' => 'canvix_header_cta',
+        'type'    => 'text',
+    ]);
+
+    $wp_customize->add_setting('canvix_header_cta_url', [
+        'default'           => home_url('/'),
+        'sanitize_callback' => 'esc_url_raw',
+    ]);
+
+    $wp_customize->add_control('canvix_header_cta_url', [
+        'label'   => 'URL du bouton',
+        'section' => 'canvix_header_cta',
+        'type'    => 'url',
+    ]);
+}
+
+add_action('customize_register', 'canvix_customize_register');
+
+
+function canvix_theme_assets() {
     if (defined('WP_DEBUG') && WP_DEBUG) {
         $vite_server = 'http://127.0.0.1:5173';
 
         wp_enqueue_style(
-            'portfolio-style',
+            'canvix-style',
             $vite_server . '/src/scss/main.scss',
             [],
             null
         );
 
         wp_enqueue_script(
-            'portfolio-vite-client',
+            'canvix-vite-client',
             $vite_server . '/@vite/client',
             [],
             null,
@@ -32,7 +64,7 @@ function portfolio_theme_assets() {
         );
 
         add_filter('script_loader_tag', static function ($tag, $handle) {
-            if ($handle !== 'portfolio-vite-client') {
+            if ($handle !== 'canvix-vite-client') {
                 return $tag;
             }
 
@@ -49,14 +81,14 @@ function portfolio_theme_assets() {
     }
 
     wp_enqueue_style(
-        'portfolio-style',
+        'canvix-style',
         get_theme_file_uri('/dist/theme.css'),
         [],
         filemtime($style_path)
     );
 }
 
-// function portfolio_register_project_cpt() {
+// function canvix_register_project_cpt() {
 //     register_post_type('project', [
 //         'labels' => [
 //             'name'          => 'Projets',
@@ -76,7 +108,7 @@ function portfolio_theme_assets() {
 //     ]);
 // }
 
-// function portfolio_register_project_taxonomies() {
+// function canvix_register_project_taxonomies() {
 //     register_taxonomy('technology', ['project'], [
 //         'labels' => [
 //             'name'          => 'Technologies',
@@ -91,7 +123,7 @@ function portfolio_theme_assets() {
 //     ]);
 // }
 
-// function portfolio_modify_project_archive($query) {
+// function canvix_modify_project_archive($query) {
 //     if (
 //         ! is_admin()
 //         && $query->is_main_query()
@@ -103,12 +135,12 @@ function portfolio_theme_assets() {
 //     }
 // }
 
-// function portfolio_add_blocks() {
+// function canvix_add_blocks() {
 //     register_block_type(get_template_directory() . '/blocks/project-meta');
 // }
 
-add_action('wp_enqueue_scripts', 'portfolio_theme_assets');
-// add_action('pre_get_posts', 'portfolio_modify_project_archive');
-// add_action('init', 'portfolio_register_project_taxonomies');
-// add_action('init', 'portfolio_register_project_cpt');
-// add_action('init', 'portfolio_add_blocks');
+add_action('wp_enqueue_scripts', 'canvix_theme_assets');
+// add_action('pre_get_posts', 'canvix_modify_project_archive');
+// add_action('init', 'canvix_register_project_taxonomies');
+// add_action('init', 'canvix_register_project_cpt');
+// add_action('init', 'canvix_add_blocks');
