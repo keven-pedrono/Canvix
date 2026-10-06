@@ -12,6 +12,39 @@ function canvix_theme_setup() {
 add_action('after_setup_theme', 'canvix_theme_setup');
 
 
+function canvix_register_service_post_type() {
+    register_post_type('service', [
+        'labels' => [
+            'name'               => 'Services',
+            'singular_name'      => 'Service',
+            'add_new_item'       => 'Ajouter un service',
+            'edit_item'          => 'Modifier le service',
+            'new_item'           => 'Nouveau service',
+            'view_item'          => 'Voir le service',
+            'search_items'       => 'Rechercher des services',
+            'not_found'          => 'Aucun service trouvé',
+            'not_found_in_trash' => 'Aucun service dans la corbeille',
+            'all_items'          => 'Tous les services',
+            'menu_name'          => 'Services',
+        ],
+        'public'             => false,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'show_in_rest'       => true,
+        'publicly_queryable' => false,
+        'has_archive'        => false,
+        'rewrite'            => false,
+        'supports'           => [
+            'title',
+            'excerpt',
+            'page-attributes',
+        ],
+    ]);
+}
+
+add_action('init', 'canvix_register_service_post_type');
+
+
 function canvix_customize_register($wp_customize) {
     $wp_customize->add_section('canvix_header_cta', [
         'title'    => 'Bouton du header',

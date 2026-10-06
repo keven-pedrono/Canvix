@@ -16,8 +16,8 @@
             &__icon {
                 background-color: vars.$color-tertiary;
 
-                svg {
-                    stroke: vars.$color-secondary;
+                img {
+                    filter: brightness(1) invert(1);
                 }
             }
 
@@ -37,10 +37,10 @@
         background-color: vars.$color-secondary;
         border-radius: 50%;
 
-        svg {
-            width: 32px;
-            height: 32px;
-            stroke: vars.$color-tertiary;
+        img {
+            width: 35px;
+            height: 35px;
+            filter: brightness(0) invert(1);
         }
     }
 
