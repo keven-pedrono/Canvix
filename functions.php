@@ -309,6 +309,20 @@ add_action('customize_register', 'canvix_customize_register');
 
 
 function canvix_theme_assets() {
+    add_filter('script_loader_tag', static function ($tag, $handle) {
+        if (!in_array($handle, ['canvix-vite-client', 'canvix-script'], true)) {
+            return $tag;
+        }
+
+        $processor = new WP_HTML_Tag_Processor($tag);
+
+        if ($processor->next_tag('SCRIPT')) {
+            $processor->set_attribute('type', 'module');
+        }
+
+        return $processor->get_updated_html();
+    }, 10, 2);
+
     if (defined('WP_DEBUG') && WP_DEBUG) {
         $vite_server = 'http://127.0.0.1:5173';
 
@@ -327,29 +341,39 @@ function canvix_theme_assets() {
             false
         );
 
-        add_filter('script_loader_tag', static function ($tag, $handle) {
-            if ($handle !== 'canvix-vite-client') {
-                return $tag;
-            }
-
-            return str_replace('<script ', '<script type="module" ', $tag);
-        }, 10, 2);
+        wp_enqueue_script(
+            'canvix-script',
+            $vite_server . '/src/js/main.js',
+            ['canvix-vite-client'],
+            null,
+            true
+        );
 
         return;
     }
 
     $style_path = get_theme_file_path('/dist/theme.css');
 
-    if (!file_exists($style_path)) {
-        return;
+    if (file_exists($style_path)) {
+        wp_enqueue_style(
+            'canvix-style',
+            get_theme_file_uri('/dist/theme.css'),
+            [],
+            filemtime($style_path)
+        );
     }
 
-    wp_enqueue_style(
-        'canvix-style',
-        get_theme_file_uri('/dist/theme.css'),
-        [],
-        filemtime($style_path)
-    );
+    $script_path = get_theme_file_path('/dist/theme.js');
+
+    if (file_exists($script_path)) {
+        wp_enqueue_script(
+            'canvix-script',
+            get_theme_file_uri('/dist/theme.js'),
+            [],
+            filemtime($script_path),
+            true
+        );
+    }
 }
 
 // function canvix_register_project_cpt() {

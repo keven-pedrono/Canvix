@@ -15,9 +15,13 @@ export default defineConfig(({ command }) => ({
     build: {
         outDir: "dist",
         emptyOutDir: true,
-        rollupOptions: {
-            input: resolve(__dirname, "src/scss/main.scss"),
+        rolldownOptions: {
+            input: {
+                style: resolve(__dirname, "src/scss/main.scss"),
+                theme: resolve(__dirname, "src/js/main.js"),
+            },
             output: {
+                entryFileNames: "[name].js",
                 assetFileNames: (asset) =>
                     asset.name?.endsWith(".css")
                         ? "theme.css"
