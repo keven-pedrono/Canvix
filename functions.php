@@ -1,5 +1,8 @@
 <?php
 
+// Conserver les groupes de champs ACF en base uniquement pour le moment.
+add_filter('acf/settings/json', '__return_false');
+
 function canvix_theme_setup() {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
@@ -43,6 +46,112 @@ function canvix_register_service_post_type() {
 }
 
 add_action('init', 'canvix_register_service_post_type');
+
+
+function canvix_register_process_post_type() {
+    register_post_type('process', [
+        'labels' => [
+            'name'               => 'Process',
+            'singular_name'      => 'Étape du process',
+            'add_new_item'       => 'Ajouter une étape',
+            'edit_item'          => 'Modifier l’étape',
+            'new_item'           => 'Nouvelle étape',
+            'view_item'          => 'Voir l’étape',
+            'search_items'       => 'Rechercher des étapes',
+            'not_found'          => 'Aucune étape trouvée',
+            'not_found_in_trash' => 'Aucune étape dans la corbeille',
+            'all_items'          => 'Toutes les étapes',
+            'menu_name'          => 'Process',
+        ],
+        'public'             => false,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'show_in_rest'       => true,
+        'publicly_queryable' => false,
+        'has_archive'        => false,
+        'rewrite'            => false,
+        'supports'           => [
+            'title',
+            'excerpt',
+            'thumbnail',
+            'page-attributes',
+        ],
+    ]);
+}
+
+add_action('init', 'canvix_register_process_post_type');
+
+
+function canvix_register_projects_post_type() {
+    register_post_type('recent_projects', [
+        'labels' => [
+            'name'               => 'Projets',
+            'singular_name'      => 'Projet',
+            'add_new_item'       => 'Ajouter un projet',
+            'edit_item'          => 'Modifier le projet',
+            'new_item'           => 'Nouveau projet',
+            'view_item'          => 'Voir le projet',
+            'search_items'       => 'Rechercher des projets',
+            'not_found'          => 'Aucun projet trouvé',
+            'not_found_in_trash' => 'Aucun projet dans la corbeille',
+            'all_items'          => 'Tous les projets',
+            'menu_name'          => 'Projets',
+        ],
+        'public'             => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'show_in_rest'       => true,
+        'publicly_queryable' => true,
+        'has_archive'        => false,
+        'rewrite'            => [
+            'slug'       => 'projects',
+            'with_front' => false,
+        ],
+        'menu_icon'          => 'dashicons-portfolio',
+        'supports'           => [
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail',
+        ],
+    ]);
+}
+
+add_action('init', 'canvix_register_projects_post_type');
+
+
+function canvix_register_testimonial_post_type() {
+    register_post_type('testimonial', [
+        'labels' => [
+            'name'               => 'Témoignages',
+            'singular_name'      => 'Témoignage',
+            'add_new_item'       => 'Ajouter un témoignage',
+            'edit_item'          => 'Modifier le témoignage',
+            'new_item'           => 'Nouveau témoignage',
+            'view_item'          => 'Voir le témoignage',
+            'search_items'       => 'Rechercher des témoignages',
+            'not_found'          => 'Aucun témoignage trouvé',
+            'not_found_in_trash' => 'Aucun témoignage dans la corbeille',
+            'all_items'          => 'Tous les témoignages',
+            'menu_name'          => 'Témoignages',
+        ],
+        'public'             => false,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'show_in_rest'       => true,
+        'publicly_queryable' => false,
+        'has_archive'        => false,
+        'rewrite'            => false,
+        'menu_icon'          => 'dashicons-format-quote',
+        'supports'           => [
+            'title',
+            'editor',
+            'thumbnail',
+        ],
+    ]);
+}
+
+add_action('init', 'canvix_register_testimonial_post_type');
 
 
 function canvix_customize_register($wp_customize) {

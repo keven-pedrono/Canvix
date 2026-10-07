@@ -53,6 +53,7 @@
     }
 
     &__icon {
+        flex-shrink: 0;
         width: 70px;
         height: 70px;
         display: flex;
@@ -61,10 +62,10 @@
         background-color: vars.$color-secondary;
         border-radius: 50%;
 
-        svg {
-            width: 30px;
-            height: 42px;
-            stroke: vars.$color-tertiary;
+        img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
         }
     }
 
