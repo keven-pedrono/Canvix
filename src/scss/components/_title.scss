@@ -3,7 +3,7 @@
 .section-header {
     display: flex;
     flex-direction: column;
-    row-gap: 25px;
+    row-gap: clamp(15px, 2.5vw, 25px);
 
     &--light {
         .section-header__subtitle {
@@ -34,13 +34,13 @@
     }
 
     &__title {
-        font-size: vars.$font-title-4;
+        font-size: clamp(vars.$font-title-5, 3vw, vars.$font-title-4);
         line-height: 1.15;
         color: vars.$color-primary;
     }
 
     &__subtitle {
-        font-size: vars.$font-title-2;
+        font-size: clamp(vars.$font-title-4, 4.2667vw, vars.$font-title-2);
         line-height: 1.15;
     }
 }

@@ -4,9 +4,9 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    row-gap: 60px;
+    row-gap: clamp(30px, 12.5cqi, 50px);
     background-color: vars.$color-tertiary-light;
-    padding: 45px;
+    padding: clamp(20px, 10cqi, 40px);
     border-radius: 20px;
 
     &--dark {
