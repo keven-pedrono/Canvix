@@ -12,17 +12,8 @@
         .header__logo {
             color: vars.$color-tertiary;
 
-            &:hover,
-            &:focus-visible {
-                color: vars.$color-primary;
-
-                svg {
-                    fill: vars.$color-primary;
-                }
-            }
-
-            svg {
-                fill: vars.$color-tertiary;
+            img {
+                filter: none;
             }
         }
 
@@ -50,11 +41,11 @@
         font-size: vars.$font-title-4;
         transition: color 0.3s ease;
 
-        svg {
+        img {
             width: 40px;
             height: 40px;
-            fill: vars.$color-secondary;
-            transition: fill 0.3s ease;
+            object-fit: cover;
+            filter: brightness(0) invert(1);
         }
     }
 }

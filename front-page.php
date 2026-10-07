@@ -4,8 +4,18 @@ get_header();
 
 <main class="main">
     <?php
-        $fields = function_exists('get_fields') ? get_fields() : [];
+        $page_id = get_queried_object_id();
+        $fields = function_exists('get_fields') ? get_fields($page_id) : [];
         $fields = is_array($fields) ? $fields : [];
+
+        $services = get_posts([
+            'post_type'        => 'service',
+            'post_status'      => 'publish',
+            'numberposts'      => -1,
+            'orderby'          => 'menu_order',
+            'order'            => 'ASC',
+            'suppress_filters' => true,
+        ]);
 
         $process = get_posts([
             'post_type'        => 'process',
@@ -39,104 +49,103 @@ get_header();
 
     <section class="hero">
         <?php
-            $hero_title_before = $fields['hero_title_before'];
-            $hero_title_highlight = $fields['hero_title_highlight'];
-            $hero_title_after = $fields['hero_title_after'];
-            $hero_description = $fields['hero_description'];
-            $hero_button = $fields['hero_button'];
-            $hero_button = is_array($hero_button) ? $hero_button : [];
-            $hero_brands_title = $fields['hero_brands_title'];
-            $hero_illustration_id = absint($fields['hero_illustration']);
+            $hero_title_before = $fields['hero_titre_debut'];
+            $hero_title_highlight = $fields['hero_titre_milieu'];
+            $hero_title_after = $fields['hero_titre_fin'];
+            $hero_excerpt = $fields['hero_description'];
+            $hero_illustration = get_the_post_thumbnail(get_the_ID(), 'full');
+
+            $brands_title = $fields['partenaires_titre'];
         ?>
 
         <div class="hero__container container">
             <div class="hero__wrap">
-                <div class="hero__content">
-                    <h1 class="hero__title">
-                        <?php echo esc_html($hero_title_before); ?>
-                        <span><?php echo esc_html($hero_title_highlight); ?></span>
-                        <?php echo esc_html($hero_title_after); ?>
-                    </h1>
+                <?php if ($hero_title_highlight || $hero_excerpt) : ?>
+                    <div class="hero__content">
+                        <?php if ($hero_title_before && $hero_title_highlight && $hero_title_after) : ?>
+                            <h1 class="hero__title">
+                                <?php echo esc_html($hero_title_before); ?>
+                                <span><?php echo esc_html($hero_title_highlight); ?></span>
+                                <?php echo esc_html($hero_title_after); ?>
+                            </h1>
+                        <?php endif; ?>
 
-                    <p class="hero__text"><?php echo esc_html($hero_description); ?></p>
+                        <?php if ($hero_excerpt) : ?>
+                            <p class="hero__text"><?php echo esc_html($hero_excerpt); ?></p>
+                        <?php endif; ?>
 
-                    <a
-                        href="<?php echo esc_url($hero_button['url'] ?? home_url('/')); ?>"
-                        class="hero__button button button--secondary"
-                        <?php if (!empty($hero_button['target'])) : ?>
-                            target="<?php echo esc_attr($hero_button['target']); ?>"
-                        <?php endif; ?>>
-                        <svg aria-hidden="true" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="14" cy="14" r="14"/>
-                            <path d="M12 9L16.6667 13.6667L12 18.3333" stroke-width="1.55439" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <a href="<?php echo esc_url(get_theme_mod('canvix_home_cta_url', home_url('/'))); ?>" class="hero__button button button--secondary">
+                            <svg aria-hidden="true" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="14" cy="14" r="14"/>
+                                <path d="M12 9L16.6667 13.6667L12 18.3333" stroke-width="1.55439" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
 
-                        <?php echo esc_html($hero_button['title'] ?? 'Start your Free Trial'); ?>
-                    </a>
-                </div>
+                            <?php echo esc_html(get_theme_mod('canvix_home_cta_label')); ?>
+                        </a>
+                    </div>
+                <?php endif; ?>
 
                 <div class="hero__cta">
-                    <h2 class="hero__brands"><?php echo esc_html($hero_brands_title); ?></h2>
+                    <?php if ($brands_title) : ?>
+                        <h2 class="hero__brands"><?php echo esc_html($brands_title); ?></h2>
 
-                    <div class="hero__links">
-                    <?php
-                    for ($brand_number = 1; $brand_number <= 4; $brand_number++) :
-                        $brand_show_key = 'hero_brand_' . $brand_number . '_show';
-                        $brand_image_key = 'hero_brand_' . $brand_number . '_image';
-                        $brand_name_key = 'hero_brand_' . $brand_number . '_name';
-                        $brand_link_key = 'hero_brand_' . $brand_number . '_link';
+                        <div class="hero__links">
+                            <?php for ($brand_number = 1; $brand_number <= 4; $brand_number++) :
+                                $brand_name_key = 'partenaire_' . $brand_number . '_nom';
+                                $brand_image_key = 'partenaire_' . $brand_number . '_image';
+                                $brand_link_key = 'partenaire_' . $brand_number . '_lien';
+                                $brand_show_key = 'partenaire_' . $brand_number . '_afficher';
 
-                        $brand_show = array_key_exists($brand_show_key, $fields)
-                            ? (bool) $fields[$brand_show_key]
-                            : true;
+                                $brand_show = array_key_exists($brand_show_key, $fields)
+                                    ? (bool) $fields[$brand_show_key]
+                                    : true;
 
-                        $brand_image_id = absint($fields[$brand_image_key] ?? 0);
-                        $brand_name = $fields[$brand_name_key] ?? '';
-                        $brand_link = $fields[$brand_link_key] ?? [];
-                        $brand_link = is_array($brand_link) ? $brand_link : [];
-                        $brand_url = $brand_link['url'] ?? '';
-                        $brand_target = $brand_link['target'] ?? '';
+                                $brand_image = wp_get_attachment_image($fields[$brand_image_key], 'full', false, ['alt' => $brand_name]);
+                                $brand_name = $fields[$brand_name_key];
+                                $brand_link = is_array($fields[$brand_link_key]) ? $fields[$brand_link_key] : [];
+                                $brand_url = $brand_link['url'] ?? '';
+                                $brand_target = $brand_link['target'] ?? '';
 
-                        if (!$brand_show || !$brand_image_id) {
-                            continue;
-                        }
-                        ?>
-                            <?php if ($brand_url) : ?>
-                            <a
-                                href="<?php echo esc_url($brand_url); ?>"
-                                class="hero__link"
-                                <?php if ($brand_target) : ?>
-                                    target="<?php echo esc_attr($brand_target); ?>"
-                                    <?php if ($brand_target === '_blank') : ?>
-                                        rel="noopener noreferrer"
-                                    <?php endif; ?>
+                                if (!$brand_show || !$brand_image) {
+                                    continue;
+                                }
+
+                                if ($brand_url) : ?>
+                                    <a
+                                        href="<?php echo esc_url($brand_url); ?>"
+                                        class="hero__link"
+                                        <?php if ($brand_target) : ?>
+                                            target="<?php echo esc_attr($brand_target); ?>"
+                                            <?php if ($brand_target === '_blank') : ?>
+                                                rel="noopener noreferrer"
+                                            <?php endif; ?>
+                                        <?php endif; ?>
+                                    >
+                                        <?php echo $brand_image; ?>
+                                    </a>
+
+                                <?php else : ?>
+                                    <?php echo $brand_image; ?>
                                 <?php endif; ?>
-                            >
-                                <?php echo wp_get_attachment_image($brand_image_id, 'full', false, ['alt' => $brand_name]); ?>
-                            </a>
-
-                            <?php else : ?>
-                                <?php echo wp_get_attachment_image($brand_image_id, 'full', false, ['alt' => $brand_name]); ?>
-                            <?php endif; ?>
-                    <?php endfor; ?>
-                    </div>
+                            <?php endfor; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
 
-            <div class="hero__illustration">
-                <div>
+            <?php if ($hero_illustration) : ?>
+                <div class="hero__illustration">
                     <div>
-                        <?php if ($hero_illustration_id) : ?>
-                            <?php echo wp_get_attachment_image($hero_illustration_id, 'full', false, ['alt' => '']); ?>
-                        <?php else : ?>
-                            <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/hero-illustration.png')); ?>" alt="">
-                        <?php endif; ?>
+                        <div>
+                            <?php echo $hero_illustration; ?>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
         </div>
     </section>
 
+    <?php if ($services) : ?>
     <section class="services">
         <div class="services__container container">
             <div class="section-header section-header--big section-header--center">
@@ -146,131 +155,134 @@ get_header();
 
             <div class="services__content">
                 <?php
-                $services = get_posts([
-                    'post_type'        => 'service',
-                    'post_status'      => 'publish',
-                    'numberposts'      => -1,
-                    'orderby'          => 'menu_order',
-                    'order'            => 'ASC',
-                    'suppress_filters' => true,
-                ]);
-
-                foreach ($services as $service_index => $service) :
-                    $service_image_id = get_field('service_image', $service->ID);
-                    $service_variant = $service_index % 2 === 0 ? ' service--dark' : '';
+                    foreach ($services as $service_index => $service) :
+                        $service_title = get_the_title($service);
+                        $service_content = get_the_excerpt($service);
+                        $service_image = get_the_post_thumbnail($service, 'medium');
+                        $service_variant = $service_index % 2 === 0 ? ' service--dark' : '';
                 ?>
                     <article class="service<?php echo esc_attr($service_variant); ?>">
-                        <div class="service__icon">
-                        <?php if ($service_image_id) :
-                            echo wp_get_attachment_image(
-                                $service_image_id,
-                                'full',
-                                false,
-                                [
-                                    'class'       => 'service__icon-image',
-                                    'alt'         => '',
-                                    'aria-hidden' => 'true',
-                                ]
-                            );
-                            ?>
+                        <?php if ($service_image) : ?>
+                            <div class="service__icon">
+                                <?php echo $service_image;?>
+                            </div>
                         <?php endif; ?>
-                        </div>
 
-                        <div class="service__content">
-                            <h4 class="service__title"><?php echo esc_html(wp_html_excerpt(get_the_title($service), 20, '…')); ?></h4>
-                            <p class="service__text"><?php echo esc_html(wp_html_excerpt(get_the_excerpt($service), 170, '…')); ?></p>
-                        </div>
+                        <?php if ($service_title || $service_content) : ?>
+                            <div class="service__content">
+                                <?php if ($service_title) : ?>
+                                    <h4 class="service__title"><?php echo esc_html(wp_html_excerpt($service_title, 20, '…')); ?></h4>
+                                <?php endif; ?>
+
+                                <?php if ($service_title) : ?>
+                                    <p class="service__text"><?php echo esc_html(wp_html_excerpt($service_content, 170, '…')); ?></p>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
                     </article>
                 <?php endforeach; ?>
             </div>
         </div>
     </section>
+    <?php endif; ?>
 
-    <section class="about">
-        <?php
-            $about_title = $fields['titre'];
-            $about_subtitle = $fields['sous-titre'];
-            $about_description = $fields['description'];
-            $about_metric_1_value = $fields['chiffre_1'];
-            $about_metric_1_label = $fields['libelle_du_chiffre_1'];
-            $about_metric_2_value = $fields['chiffre_2'];
-            $about_metric_2_label = $fields['libelle_du_chiffre_2'];
-            $about_button = $fields['bouton_about_us'];
-            $about_button = is_array($about_button) ? $about_button : [];
-            $about_illustration_1_id = absint($fields['illustration_1']);
-            $about_illustration_2_id = absint($fields['illustration_2']);
-            $about_illustration_3_id = absint($fields['illustration_3']);
-        ?>
+    <?php
+        $about_page = get_page_by_path('about');
 
-        <div class="about__container container">
-            <div class="about__illustrations">
-                <div class="about__illustration">
-                    <?php if ($about_illustration_1_id) : ?>
-                        <?php echo wp_get_attachment_image($about_illustration_1_id, 'full', false, ['alt' => '']); ?>
-                    <?php else : ?>
-                        <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/about-illustration-1.png')); ?>" alt="">
+        if ($about_page) :
+    ?>
+            <section class="about">
+                <?php
+                    $about_fields = ($about_page && function_exists('get_fields')) ? get_fields($about_page->ID) : [];
+                    $about_title = get_the_title($about_page);
+                    $about_subtitle = $about_fields['sous_titre'];
+                    $about_excerpt = $about_fields['extrait'];
+
+                    $about_metric_1_label = $about_fields['libelle_nombre_1'];
+                    $about_metric_1_value = $about_fields['nombre_1'];
+
+                    $about_metric_2_label = $about_fields['libelle_nombre_2'];
+                    $about_metric_2_value = $about_fields['nombre_2'];
+
+                    $about_illustration_1 = get_the_post_thumbnail($about_page, 'large');
+                    $about_illustration_2 = wp_get_attachment_image($about_fields['illustration_secondaire'], 'large');
+                    $about_illustration_3 = wp_get_attachment_image($about_fields['illustration_tertiaire'], 'large');
+                ?>
+
+                <div class="about__container container">
+                    <?php if ($about_illustration_1 && $about_illustration_2 && $about_illustration_3) : ?>
+                        <div class="about__illustrations">
+                            <div class="about__illustration">
+                                <?php echo $about_illustration_3; ?>
+                            </div>
+
+                            <div class="about__illustration">
+                                <?php echo $about_illustration_2; ?>
+                            </div>
+
+                            <div class="about__illustration">
+                                <?php echo $about_illustration_1; ?>
+                            </div>
+                        </div>
                     <?php endif; ?>
-                </div>
 
-                <div class="about__illustration">
-                    <?php if ($about_illustration_2_id) : ?>
-                        <?php echo wp_get_attachment_image($about_illustration_2_id, 'full', false, ['alt' => '']); ?>
-                    <?php else : ?>
-                        <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/about-illustration-2.png')); ?>" alt="">
-                    <?php endif; ?>
-                </div>
+                    <div class="about__content">
+                        <?php if ($about_title || $about_subtitle) : ?>
+                            <div class="section-header section-header--light section-header--small">
+                                <?php if ($about_title) : ?>
+                                    <h2 class="section-header__title"><?php echo esc_html($about_title); ?></h2>
+                                <?php endif; ?>
 
-                <div class="about__illustration">
-                    <?php if ($about_illustration_3_id) : ?>
-                        <?php echo wp_get_attachment_image($about_illustration_3_id, 'full', false, ['alt' => '']); ?>
-                    <?php else : ?>
-                        <img src="<?php echo esc_url(get_theme_file_uri('/src/assets/images/about-illustration-3.png')); ?>" alt="">
-                    <?php endif; ?>
-                </div>
-            </div>
-
-            <div class="about__content">
-                <div class="section-header section-header--light section-header--small">
-                    <h2 class="section-header__title"><?php echo esc_html($about_title); ?></h2>
-                    <h3 class="section-header__subtitle"><?php echo esc_html($about_subtitle); ?></h3>
-                </div>
-
-                <p class="about__text"><?php echo esc_html($about_description); ?></p>
-
-                <div class="about__numbers">
-                    <div class="about__number">
-                        <span><?php echo esc_html($about_metric_1_value); ?></span>
-
-                        <p><?php echo esc_html($about_metric_1_label); ?></p>
-                    </div>
-
-                    <div class="about__number">
-                        <span><?php echo esc_html($about_metric_2_value); ?></span>
-
-                        <p><?php echo esc_html($about_metric_2_label); ?></p>
-                    </div>
-                </div>
-
-                <a
-                    href="<?php echo esc_url($about_button['url'] ?? home_url('/')); ?>"
-                    class="about__button button button--secondary"
-                    <?php if (!empty($about_button['target'])) : ?>
-                        target="<?php echo esc_attr($about_button['target']); ?>"
-                        <?php if ($about_button['target'] === '_blank') : ?>
-                            rel="noopener noreferrer"
+                                <?php if ($about_subtitle) : ?>
+                                    <h3 class="section-header__subtitle"><?php echo esc_html($about_subtitle); ?></h3>
+                                <?php endif; ?>
+                            </div>
                         <?php endif; ?>
-                    <?php endif; ?>
-                >
-                    <svg aria-hidden="true" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="14" cy="14" r="14"/>
-                        <path d="M12 9L16.6667 13.6667L12 18.3333" stroke-width="1.55439" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
 
-                    <?php echo esc_html($about_button['title']); ?>
-                </a>
-            </div>
-        </div>
-    </section>
+                        <?php if ($about_excerpt) : ?>
+                            <p class="about__text"><?php echo esc_html($about_excerpt); ?></p>
+                        <?php endif; ?>
+
+                        <?php if (($about_metric_1_label && $about_metric_1_value) || ($about_metric_2_label && $about_metric_2_value)) : ?>
+                            <div class="about__numbers">
+                                <?php if ($about_metric_1_label || $about_metric_1_value) : ?>
+                                    <div class="about__number">
+                                        <?php if ($about_metric_1_value) : ?>
+                                            <span><?php echo esc_html($about_metric_1_value); ?> +</span>
+                                        <?php endif; ?>
+
+                                        <?php if ($about_metric_1_label) : ?>
+                                            <p><?php echo esc_html($about_metric_1_label); ?></p>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if ($about_metric_2_label || $about_metric_2_value) : ?>
+                                    <div class="about__number">
+                                        <?php if ($about_metric_2_value) : ?>
+                                            <span><?php echo esc_html($about_metric_2_value); ?> +</span>
+                                        <?php endif; ?>
+
+                                        <?php if ($about_metric_2_label) : ?>
+                                            <p><?php echo esc_html($about_metric_2_label); ?></p>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
+
+                        <a href="<?php echo esc_url(get_theme_mod('canvix_home_cta_url', home_url('/'))); ?>" class="about__button button button--secondary">
+                            <svg aria-hidden="true" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="14" cy="14" r="14"/>
+                                <path d="M12 9L16.6667 13.6667L12 18.3333" stroke-width="1.55439" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+
+                            <?php echo esc_html(get_theme_mod('canvix_home_cta_label')); ?>
+                        </a>
+                    </div>
+                </div>
+            </section>
+    <?php endif; ?>
 
     <?php if ($process) : ?>
     <section class="process">
@@ -285,23 +297,24 @@ get_header();
                     <?php
                         $process_title = get_the_title($process_step);
                         $process_content = get_the_excerpt($process_step);
+                        $process_image = get_the_post_thumbnail($process_step, 'medium');
                     ?>
 
                     <li class="process__step">
                         <article class="step">
-                            <?php if (has_post_thumbnail($process_step) || $process_title) : ?>
+                            <?php if ($process_image || $process_title) : ?>
                                 <div class="step__header">
-                                <?php if (has_post_thumbnail($process_step)) : ?>
-                                    <span class="step__icon">
-                                        <?php echo get_the_post_thumbnail($process_step, 'small'); ?>
-                                    </span>
-                                <?php endif; ?>
+                                    <?php if ($process_image) : ?>
+                                        <span class="step__icon">
+                                            <?php echo $process_image ?>
+                                        </span>
+                                    <?php endif; ?>
 
-                                <?php if ($process_title) : ?>
-                                    <h4 class="step__title"><?php echo esc_html($process_title); ?></h4>
-                                <?php endif; ?>
+                                    <?php if ($process_title) : ?>
+                                        <h4 class="step__title"><?php echo esc_html($process_title); ?></h4>
+                                    <?php endif; ?>
+                                </div>
                             <?php endif; ?>
-                            </div>
 
                             <?php if ($process_content) : ?>
                                 <p class="step__text"><?php echo esc_html($process_content); ?></p>
@@ -324,13 +337,13 @@ get_header();
             <h2 class="projects__title title">Recent Showcase</h2>
 
             <div class="projects__content">
-                <a href="/" class="projects__button button">
+                <a href="<?php echo esc_url(get_theme_mod('canvix_home_cta_url', home_url('/'))); ?>" class="projects__button button">
                     <svg aria-hidden="true" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="14" cy="14" r="14"/>
                         <path d="M12 9L16.6667 13.6667L12 18.3333" stroke-width="1.55439" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
 
-                    Start your Free Trial
+                    <?php echo esc_html(get_theme_mod('canvix_home_cta_label')); ?>
                 </a>
 
                 <ul class="projects__list">
@@ -339,20 +352,21 @@ get_header();
                             $project_title = get_the_title($project);
                             $project_content = get_the_excerpt($project);
                             $project_url = get_permalink($project);
+                            $project_image = get_the_post_thumbnail($project, 'large');
                         ?>
 
                         <li class="projects__item">
                             <a href="<?php echo esc_url($project_url); ?>" class="project">
-                                <?php if (has_post_thumbnail($project)) : ?>
+                                <?php if ($project_image) : ?>
                                     <div class="project__illustration">
-                                        <?php echo get_the_post_thumbnail($project, 'large'); ?>
+                                        <?php echo $project_image; ?>
                                     </div>
                                 <?php endif; ?>
 
                                 <?php if ($project_title || $project_content) : ?>
                                     <div class="project__content">
                                         <?php if ($project_title) : ?>
-                                            <h4 class="project__title"><?php echo esc_html($project_title); ?></h4>
+                                            <h3 class="project__title"><?php echo esc_html($project_title); ?></h3>
                                         <?php endif; ?>
 
                                         <?php if ($project_content) : ?>
@@ -380,12 +394,13 @@ get_header();
                     <?php
                         $testimonial_name = get_the_title($testimonial);
                         $testimonial_position = function_exists('get_field') ? get_field('testimonial_position', $testimonial->ID) : '';
-                        $testimonial_content = get_the_content(null, false, $testimonial);
+                        $testimonial_content = get_the_excerpt($testimonial);
+                        $testimonial_image = get_the_post_thumbnail($testimonial, 'medium', ['class' => 'testimony__photo', 'alt'   => '',]);
                     ?>
                     <li class="testimonies__item">
                         <article class="testimony">
-                            <?php if (has_post_thumbnail($testimonial)) : ?>
-                                <?php echo get_the_post_thumbnail($testimonial, 'medium', ['class' => 'testimony__photo', 'alt'   => '',]);?>
+                            <?php if ($testimonial_image) : ?>
+                                <?php echo $testimonial_image;?>
                             <?php endif; ?>
 
                             <?php if ($testimonial_content) : ?>

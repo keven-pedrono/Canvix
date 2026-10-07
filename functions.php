@@ -5,10 +5,13 @@ add_filter('acf/settings/json', '__return_false');
 
 function canvix_theme_setup() {
     add_theme_support('title-tag');
+    add_theme_support('custom-logo');
     add_theme_support('post-thumbnails');
 
     register_nav_menus([
         'primary' => 'Menu principal',
+        'footer_pages'     => 'Footer — Pages',
+        'footer_utilities' => 'Footer — Liens utiles',
     ]);
 }
 
@@ -40,6 +43,7 @@ function canvix_register_service_post_type() {
         'supports'           => [
             'title',
             'excerpt',
+            'thumbnail',
             'page-attributes',
         ],
     ]);
@@ -145,7 +149,7 @@ function canvix_register_testimonial_post_type() {
         'menu_icon'          => 'dashicons-format-quote',
         'supports'           => [
             'title',
-            'editor',
+            'excerpt',
             'thumbnail',
         ],
     ]);
@@ -179,6 +183,124 @@ function canvix_customize_register($wp_customize) {
     $wp_customize->add_control('canvix_header_cta_url', [
         'label'   => 'URL du bouton',
         'section' => 'canvix_header_cta',
+        'type'    => 'url',
+    ]);
+
+
+
+    $wp_customize->add_section('canvix_home_cta', [
+        'title'    => 'Bouton de la home',
+        'priority' => 40,
+    ]);
+
+    $wp_customize->add_setting('canvix_home_cta_label', [
+        'default'           => 'Start your Free Trial',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+
+    $wp_customize->add_control('canvix_home_cta_label', [
+        'label'   => 'Texte du bouton',
+        'section' => 'canvix_home_cta',
+        'type'    => 'text',
+    ]);
+
+    $wp_customize->add_setting('canvix_home_cta_url', [
+        'default'           => home_url('/'),
+        'sanitize_callback' => 'esc_url_raw',
+    ]);
+
+    $wp_customize->add_control('canvix_home_cta_url', [
+        'label'   => 'URL du bouton',
+        'section' => 'canvix_home_cta',
+        'type'    => 'url',
+    ]);
+
+
+
+
+    $wp_customize->add_section('canvix_footer', [
+        'title'    => 'Footer',
+        'priority' => 50,
+    ]);
+
+    $wp_customize->add_setting('canvix_footer_excerpt', [
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+
+    $wp_customize->add_control('canvix_footer_excerpt', [
+        'label'   => 'Description',
+        'section' => 'canvix_footer',
+        'type'    => 'text',
+    ]);
+
+
+    $wp_customize->add_setting('canvix_footer_copyright', [
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+
+    $wp_customize->add_control('canvix_footer_copyright', [
+        'label'   => 'Copyright',
+        'section' => 'canvix_footer',
+        'type'    => 'text',
+    ]);
+
+
+    $wp_customize->add_setting('canvix_footer_address', [
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+
+    $wp_customize->add_control('canvix_footer_address', [
+        'label'   => 'Adresse',
+        'section' => 'canvix_footer',
+        'type'    => 'text',
+    ]);
+
+
+    $wp_customize->add_setting('canvix_footer_phone', [
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+
+    $wp_customize->add_control('canvix_footer_phone', [
+        'label'       => 'Téléphone',
+        'section'     => 'canvix_footer',
+        'type'        => 'tel',
+        'description' => 'Exemple : +33 1 23 45 67 89',
+    ]);
+
+
+    $wp_customize->add_setting('canvix_footer_facebook_url', [
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ]);
+
+    $wp_customize->add_control('canvix_footer_facebook_url', [
+        'label'   => 'Lien Facebook',
+        'section' => 'canvix_footer',
+        'type'    => 'url',
+    ]);
+
+
+    $wp_customize->add_setting('canvix_footer_instagram_url', [
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ]);
+
+    $wp_customize->add_control('canvix_footer_instagram_url', [
+        'label'   => 'Lien Instagram',
+        'section' => 'canvix_footer',
+        'type'    => 'url',
+    ]);
+
+
+    $wp_customize->add_setting('canvix_footer_linkedin_url', [
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ]);
+
+    $wp_customize->add_control('canvix_footer_linkedin_url', [
+        'label'   => 'Lien LinkedIn',
+        'section' => 'canvix_footer',
         'type'    => 'url',
     ]);
 }

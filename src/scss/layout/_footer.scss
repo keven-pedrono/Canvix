@@ -39,25 +39,14 @@
         color: vars.$color-tertiary;
         transition: color 0.3s ease;
 
-        &:hover,
-        &:focus-visible {
-            color: vars.$color-primary;
-
-            svg {
-                fill: vars.$color-primary;
-            }
-        }
-
-        svg {
+        img {
             width: 52px;
             height: 52px;
-            fill: vars.$color-tertiary;
-            transition: fill 0.3s ease;
         }
     }
 
     &__text {
-        color: vars.$color-tertiary-light;
+        color: vars.$color-tertiary;
     }
 
     &__pages,
@@ -133,8 +122,10 @@
         row-gap: 15px;
 
         p,
+        address,
         a {
             font-size: vars.$font-medium;
+            font-style: inherit;
             color: vars.$color-tertiary;
         }
 
