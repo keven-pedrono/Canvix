@@ -106,7 +106,7 @@
                     <?php endif; ?>
 
                     <?php if ($address) : ?>
-                        <div class="footer__adress">
+                        <div class="footer__address">
                             <h2 class="footer__title">Address</h2>
 
                             <address><?php echo esc_html($address);?></address>

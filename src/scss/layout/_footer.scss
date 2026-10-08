@@ -2,8 +2,8 @@
 
 .footer {
     background-color: vars.$color-secondary;
-    padding-block-start: 100px;
-    margin-block-start: 110px;
+    padding-block-start: clamp(50px, 6.666vw, 100px);
+    margin-block-start: clamp(50px, 6.666vw, 100px);
 
     &__title {
         font-size: vars.$font-title-5;
@@ -13,17 +13,19 @@
     &__container {
         display: grid;
         grid-template-rows: auto auto;
-        row-gap: 100px;
+        row-gap: clamp(50px, 6.666vw, 100px);
     }
 
     &__top {
-        display: flex;
+        display: grid;
+        grid-template-columns:
+            minmax(0px, 320px) minmax(160px, 1fr) minmax(160px, 1fr)
+            minmax(0px, 430px);
         justify-content: space-between;
         column-gap: 30px;
     }
 
     &__content {
-        max-width: 350px;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -51,7 +53,6 @@
 
     &__pages,
     &__utilities {
-        max-width: 200px;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -76,7 +77,6 @@
     }
 
     &__subscribe {
-        width: min(430px, 100%);
         display: flex;
         flex-direction: column;
         row-gap: 20px;
@@ -86,13 +86,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        column-gap: 10px;
         background-color: vars.$color-tertiary;
         padding-inline: 20px;
         padding-block: 10px;
         border-radius: 40px;
 
         input[type="email"] {
-            width: max(250px, 100%);
             display: block;
             appearance: none;
             padding-block: 12.5px;
@@ -107,15 +107,16 @@
 
     &__bottom {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
-        column-gap: 30px;
-        padding-block: 30px 60px;
+        gap: 30px;
+        padding-block: 30px clamp(30px, 4vw, 60px);
         border-top: 1px solid vars.$color-tertiary;
     }
 
     &__copyright,
     &__contact,
-    &__adress {
+    &__address {
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -142,7 +143,7 @@
     &__socials {
         display: flex;
         align-items: center;
-        column-gap: 30px;
+        column-gap: clamp(15px, 2vw, 30px);
     }
 
     &__social a {
@@ -164,6 +165,104 @@
             width: 22.5px;
             height: 22.5px;
             stroke: vars.$color-secondary;
+        }
+    }
+
+    @media (max-width: 1150px) {
+        &__subscribe {
+            align-items: center;
+        }
+
+        &__form {
+            width: 100%;
+            flex-direction: column;
+            row-gap: 10px;
+
+            label,
+            input[type="email"],
+            .button {
+                width: 100%;
+            }
+
+            input[type="email"] {
+                text-align: center;
+            }
+
+            .button {
+                justify-content: center;
+            }
+        }
+    }
+
+    @media (max-width: 950px) {
+        &__top {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-areas:
+                "content subscribe"
+                "pages utilities";
+            row-gap: 40px;
+        }
+
+        &__content {
+            grid-area: content;
+            align-items: center;
+        }
+
+        &__subscribe {
+            grid-area: subscribe;
+        }
+
+        &__pages {
+            grid-area: pages;
+        }
+
+        &__utilities {
+            grid-area: utilities;
+        }
+
+        &__pages,
+        &__utilities {
+            align-items: center;
+
+            ul {
+                align-items: center;
+            }
+        }
+
+        &__text {
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 600px) {
+        &__top {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "content"
+                "pages"
+                "utilities"
+                "subscribe";
+        }
+
+        &__bottom {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__copyright,
+        &__contact,
+        &__address {
+            align-items: center;
+
+            p,
+            address,
+            a {
+                text-align: center;
+            }
         }
     }
 }
