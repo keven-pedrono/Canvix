@@ -1,34 +1,50 @@
 @use "../abstracts/variables" as vars;
 
 .process {
-    padding-block-start: 110px;
+    padding-block-start: clamp(50px, 7.333vw, 110px);
 
     &__container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        row-gap: 130px;
+        row-gap: clamp(60px, 8.666vw, 130px);
     }
 
     &__steps {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(4, 270px);
+        grid-template-columns: repeat(4, minmax(0, 270px));
         justify-content: space-between;
+        column-gap: 60px;
     }
 
     &__step {
         display: flex;
         align-items: center;
     }
+
+    @media (max-width: 1200px) {
+        &__steps {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: clamp(30px, 6vw, 60px) clamp(20px, 4vw, 40px);
+        }
+    }
+
+    @media (max-width: 600px) {
+        &__steps {
+            grid-template-columns: minmax(0, 1fr);
+
+            row-gap: clamp(40px, 10vw, 60px);
+        }
+    }
 }
 
 .step {
     position: relative;
-    padding-block: 75px 35px;
-    padding-inline: 35px 20px;
+    padding-block: clamp(40px, 5vw, 75px) clamp(20px, 2.333vw, 35px);
+    padding-inline: clamp(20px, 2.333vw, 35px) 20px;
     border: 3px solid vars.$color-tertiary-light;
-    border-radius: 30px;
+    border-radius: 30px 0 30px 30px;
 
     &::after {
         content: "";
@@ -42,20 +58,21 @@
 
     &__header {
         position: absolute;
-        top: -35px;
-        left: 70px;
+        top: clamp(-35px, -2.333vw, -20px);
+        left: clamp(20px, 4.666vw, 70px);
+        right: -3px;
+        width: calc(100% - clamp(20px, 4.666vw, 70px) + 3px);
         display: flex;
         align-items: center;
         column-gap: 20px;
         background-color: vars.$color-tertiary;
-        padding-inline-end: 15px;
         z-index: 1;
     }
 
     &__icon {
         flex-shrink: 0;
-        width: 70px;
-        height: 70px;
+        width: clamp(40px, 4.666vw, 70px);
+        height: clamp(40px, 4.666vw, 70px);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -63,14 +80,14 @@
         border-radius: 50%;
 
         img {
-            width: 70px;
-            height: 70px;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
         }
     }
 
     &__title {
-        font-size: vars.$font-title-4;
+        font-size: clamp(vars.$font-title-5, 2vw, vars.$font-title-4);
     }
 
     &__text {
@@ -81,7 +98,7 @@
         position: absolute;
         top: 50%;
         left: 100%;
-        width: 70px;
+        width: clamp(30px, 4vw, 60px);
         height: 3px;
         background-color: vars.$color-tertiary-light;
 
@@ -95,6 +112,58 @@
             border-block-start: 3px solid vars.$color-tertiary-light;
             border-inline-end: 3px solid vars.$color-tertiary-light;
             transform: translateY(-50%) rotate(45deg);
+        }
+    }
+
+    @media (max-width: 1200px) {
+        padding-block: clamp(40px, 7.5vw, 75px) clamp(20px, 3.5vw, 35px);
+        padding-inline: clamp(20px, 3.5vw, 35px) 20px;
+        border-radius: 30px;
+
+        &::after {
+            display: none;
+        }
+
+        &__header {
+            top: clamp(-35px, -3.5vw, -25px);
+            left: 50%;
+            right: unset;
+            transform: translateX(-50%);
+            column-gap: clamp(10px, 2vw, 20px);
+            width: unset;
+            padding-inline-end: 15px;
+        }
+
+        &__icon {
+            width: clamp(50px, 7vw, 70px);
+            height: clamp(50px, 7vw, 70px);
+        }
+
+        &__title {
+            font-size: clamp(vars.$font-title-5, 3vw, vars.$font-title-4);
+        }
+
+        &__arrow {
+            display: none;
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding-block: clamp(40px, 10vw, 60px) clamp(20px, 6vw, 35px);
+        padding-inline: clamp(20px, 6vw, 35px) 20px;
+
+        &__header {
+            top: clamp(-30px, -5vw, -20px);
+            column-gap: clamp(10px, 3.333vw, 20px);
+        }
+
+        &__icon {
+            width: clamp(50px, 10vw, 60px);
+            height: clamp(50px, 10vw, 60px);
+        }
+
+        &__title {
+            font-size: clamp(vars.$font-title-5, 4vw, 24px);
         }
     }
 }
