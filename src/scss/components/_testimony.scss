@@ -4,18 +4,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 35px;
+    row-gap: clamp(20px, 6vw, 35px);
 
     &__photo {
-        width: 150px;
-        height: 150px;
+        width: clamp(120px, 25vw, 150px);
+        height: clamp(120px, 25vw, 150px);
         object-fit: cover;
         border-radius: 50%;
     }
 
     &__quote {
         font-family: vars.$font-headings;
-        font-size: 25px;
+        font-size: clamp(20px, 4.175vw, 25px);
         font-weight: 700;
         text-align: center;
     }

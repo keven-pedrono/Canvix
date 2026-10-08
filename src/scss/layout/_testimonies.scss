@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as vars;
 
 .testimonies {
-    margin-block-start: 100px;
+    margin-block-start: clamp(50px, 6.666vw, 100px);
 
     &__container {
         display: flex;
@@ -9,7 +9,7 @@
         align-items: center;
         row-gap: 20px;
         background-color: vars.$color-tertiary-light;
-        padding: 45px;
+        padding: clamp(20px, 5.6125vw, 45px);
         border-radius: 20px;
     }
 
@@ -57,8 +57,8 @@
             }
 
             svg {
-                width: 20px;
-                height: 20px;
+                width: 50%;
+                height: 50%;
                 stroke: vars.$color-tertiary;
                 transition: stroke 0.3s ease;
             }

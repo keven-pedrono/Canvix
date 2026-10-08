@@ -41,6 +41,8 @@
     }
 
     @media (max-width: 800px) {
+        padding-block-end: 0;
+
         &__container {
             row-gap: 30px;
         }
