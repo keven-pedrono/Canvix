@@ -2,29 +2,32 @@
     $testimonials = get_posts([
         'post_type'        => 'testimonial',
         'post_status'      => 'publish',
-        'numberposts'      => 1,
+        'numberposts'      => -1,
         'orderby'          => [
             'date' => 'DESC',
             'ID'   => 'DESC',
         ],
     ]);
+    $testimonial_count = count($testimonials);
 ?>
 
 <?php if ($testimonials) : ?>
     <section class="testimonies">
         <div class="testimonies__container container">
             <ul id="testimonials-slider" class="testimonies__list"
-                aria-roledescription="carousel"
                 aria-label="Testimonials"
-                tabindex="0">
-                <?php foreach ($testimonials as $testimonial) : ?>
+                <?php if ($testimonial_count > 1) : ?>
+                    aria-roledescription="carousel"
+                <?php endif; ?>>
+                <?php foreach ($testimonials as $testimonial_index => $testimonial) : ?>
                     <?php
                         $testimonial_name = get_the_title($testimonial);
                         $testimonial_position = function_exists('get_field') ? get_field('testimonial_position', $testimonial->ID) : '';
                         $testimonial_content = get_the_excerpt($testimonial);
                         $testimonial_image = get_the_post_thumbnail($testimonial, 'medium', ['class' => 'testimony__photo', 'alt'   => '',]);
                     ?>
-                    <li class="testimonies__item">
+                    <li class="testimonies__item"
+                        aria-label="<?php echo esc_attr(sprintf('Testimonial %1$d of %2$d', $testimonial_index + 1, $testimonial_count)); ?>">
                         <article class="testimony">
                             <?php if ($testimonial_image) : ?>
                                 <?php echo $testimonial_image;?>
@@ -52,8 +55,8 @@
                 <?php endforeach; ?>
             </ul>
 
-            <?php if (count($testimonials) > 1) : ?>
-                <div class="testimonies__pagination">
+            <?php if ($testimonial_count > 1) : ?>
+                <div class="testimonies__pagination" hidden>
                     <button type="button"
                     aria-label="Previous testimonial"
                     aria-controls="testimonials-slider"
@@ -73,6 +76,7 @@
                         </svg>
                     </button>
                 </div>
+                <p class="visually-hidden" data-slider-status role="status" aria-atomic="true"></p>
             <?php endif; ?>
         </div>
     </section>

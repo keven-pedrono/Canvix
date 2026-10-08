@@ -13,9 +13,39 @@
         border-radius: 20px;
     }
 
+    &__list {
+        width: 100%;
+        min-width: 0;
+        display: grid;
+        row-gap: 40px;
+    }
+
+    &__item {
+        min-width: 0;
+    }
+
+    &--slider {
+        .testimonies__list {
+            row-gap: 0;
+        }
+
+        .testimonies__item {
+            grid-area: 1 / 1;
+            visibility: hidden;
+
+            &.active {
+                visibility: visible;
+            }
+        }
+    }
+
     &__pagination {
         display: flex;
         column-gap: 10px;
+
+        &[hidden] {
+            display: none;
+        }
 
         button {
             width: 40px;
