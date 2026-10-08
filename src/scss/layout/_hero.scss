@@ -118,6 +118,7 @@
 
     @media (max-width: 800px) {
         padding-block-start: 90px;
+
         &__container {
             display: flex;
         }
@@ -128,6 +129,25 @@
 
         &__content {
             max-width: 100%;
+            align-items: center;
+        }
+
+        &__title,
+        &__text,
+        &__brands {
+            text-align: center;
+        }
+
+        &__button {
+            align-self: unset;
+        }
+
+        &__cta {
+            align-items: center;
+        }
+
+        &__links {
+            justify-content: center;
         }
 
         &__illustration {

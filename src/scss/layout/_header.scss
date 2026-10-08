@@ -1,5 +1,13 @@
 @use "../abstracts/variables" as vars;
 
+body.admin-bar .header--home {
+    margin-top: 32px;
+
+    @media (max-width: 782px) {
+        margin-top: 46px;
+    }
+}
+
 .header {
     width: 100%;
     padding-block: 25px;
@@ -7,7 +15,6 @@
     &--home {
         position: absolute;
         top: 0;
-        margin-top: 32px;
         z-index: 1;
 
         .header__logo {
@@ -98,8 +105,8 @@
 
     &__burger {
         display: none;
-        width: 25px;
-        height: 20px;
+        width: 35px;
+        height: 30px;
         flex-direction: column;
         justify-content: space-between;
 

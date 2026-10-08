@@ -13,8 +13,7 @@
     &__content {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
-        grid-auto-rows: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
         column-gap: clamp(30px, 4.333vw, 65px);
         row-gap: clamp(30px, 5.333vw, 80px);
     }

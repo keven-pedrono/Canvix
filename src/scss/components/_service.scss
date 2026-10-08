@@ -29,8 +29,8 @@
     }
 
     &__icon {
-        width: 80px;
-        height: 80px;
+        width: clamp(60px, 20cqi, 80px);
+        height: clamp(60px, 20cqi, 80px);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -38,8 +38,8 @@
         border-radius: 50%;
 
         img {
-            width: 35px;
-            height: 35px;
+            width: 40%;
+            height: 40%;
             filter: brightness(0) invert(1);
         }
     }
@@ -51,7 +51,20 @@
     }
 
     &__title {
-        font-size: 25px;
+        font-size: clamp(20px, 6.25cqi, 25px);
         font-weight: 500;
+    }
+
+    @media (max-width: 800px) {
+        align-items: center;
+
+        &__content {
+            align-items: center;
+        }
+
+        &__title,
+        &__text {
+            text-align: center;
+        }
     }
 }
