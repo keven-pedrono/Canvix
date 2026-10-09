@@ -19,10 +19,10 @@
     &__top {
         display: grid;
         grid-template-columns:
-            minmax(0px, 320px) minmax(160px, 1fr) minmax(160px, 1fr)
+            minmax(0px, 320px) fit-content(200px) fit-content(200px)
             minmax(0px, 430px);
         justify-content: space-between;
-        column-gap: 30px;
+        column-gap: 60px;
     }
 
     &__content {
@@ -92,7 +92,12 @@
         padding-block: 10px;
         border-radius: 40px;
 
+        label {
+            flex: 1;
+        }
+
         input[type="email"] {
+            width: 100%;
             display: block;
             appearance: none;
             padding-block: 12.5px;

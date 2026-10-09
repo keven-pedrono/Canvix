@@ -61,10 +61,15 @@
     }
 
     &--header {
-        color: vars.$color-text;
-        background-color: vars.$color-tertiary;
+        color: vars.$color-tertiary;
+        background-color: vars.$color-secondary;
         padding-block: 12.5px;
         padding-inline: 15px;
+    }
+
+    &--home {
+        color: vars.$color-text;
+        background-color: vars.$color-tertiary;
     }
 
     &--border {

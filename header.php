@@ -38,7 +38,7 @@
                     ?>
                 </nav>
 
-                <a href="<?php echo esc_url(get_theme_mod('canvix_header_cta_url', home_url('/'))); ?>" class="header__cta button button--header">
+                <a href="<?php echo esc_url(get_theme_mod('canvix_header_cta_url', home_url('/'))); ?>" class="header__cta button button--header <?php echo is_front_page() ? 'button--home' : '';?>">
                     <?php echo esc_html(get_theme_mod('canvix_header_cta_label', 'Get in touch')); ?>
                 </a>
             </div>
@@ -48,7 +48,7 @@
                 aria-label="Menu principal"
                 aria-expanded="false"
                 aria-controls="main-menu"
-                class="menu__burger"
+                class="menu__burger <?php echo is_front_page() ? 'menu__burger--home' : '';?>"
             >
                 <span></span>
                 <span></span>

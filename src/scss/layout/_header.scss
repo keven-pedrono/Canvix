@@ -9,6 +9,7 @@ body.admin-bar .header--home {
 }
 
 .header {
+    position: relative;
     width: 100%;
     padding-block: 25px;
 
@@ -27,11 +28,6 @@ body.admin-bar .header--home {
 
         .menu__list a {
             color: vars.$color-tertiary;
-
-            &:hover,
-            &:focus-visible {
-                color: vars.$color-primary;
-            }
         }
     }
 
@@ -57,7 +53,7 @@ body.admin-bar .header--home {
             width: 40px;
             height: 40px;
             object-fit: cover;
-            filter: brightness(0) invert(1);
+            filter: brightness(1) invert(1);
         }
     }
 
@@ -100,6 +96,11 @@ body.admin-bar .header--home {
         a {
             font-size: vars.$font-title-5;
             transition: color 0.3s ease;
+
+            &:hover,
+            &:focus-visible {
+                color: vars.$color-primary;
+            }
         }
     }
 
@@ -114,10 +115,16 @@ body.admin-bar .header--home {
             width: 100%;
             height: 3px;
             display: block;
-            background-color: vars.$color-tertiary;
+            background-color: vars.$color-secondary;
             transition:
                 transform 0.3s ease,
                 opacity 0.3s ease;
+        }
+
+        &--home {
+            span {
+                background-color: vars.$color-tertiary;
+            }
         }
     }
 
