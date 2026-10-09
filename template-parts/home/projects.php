@@ -1,6 +1,6 @@
 <?php
     $projects = get_posts([
-        'post_type'   => 'recent_projects',
+        'post_type'   => 'projects',
         'post_status' => 'publish',
         'numberposts' => 4,
         'orderby'     => [
@@ -27,33 +27,8 @@
 
                 <ul class="projects__list">
                     <?php foreach ($projects as $project) : ?>
-                        <?php
-                            $project_title = get_the_title($project);
-                            $project_content = get_the_excerpt($project);
-                            $project_url = get_permalink($project);
-                            $project_image = get_the_post_thumbnail($project, 'large');
-                        ?>
-
                         <li class="projects__item">
-                            <a href="<?php echo esc_url($project_url); ?>" class="project">
-                                <?php if ($project_image) : ?>
-                                    <div class="project__illustration">
-                                        <?php echo $project_image; ?>
-                                    </div>
-                                <?php endif; ?>
-
-                                <?php if ($project_title || $project_content) : ?>
-                                    <div class="project__content">
-                                        <?php if ($project_title) : ?>
-                                            <h3 class="project__title"><?php echo esc_html($project_title); ?></h3>
-                                        <?php endif; ?>
-
-                                        <?php if ($project_content) : ?>
-                                            <p class="project__text"><?php echo esc_html($project_content); ?></p>
-                                        <?php endif; ?>
-                                    </div>
-                                <?php endif; ?>
-                            </a>
+                            <?php get_template_part('template-parts/cards/project', null, ['project' => $project]); ?>
                         </li>
                     <?php endforeach; ?>
                 </ul>

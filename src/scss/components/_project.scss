@@ -54,7 +54,7 @@
     }
 
     &__title {
-        font-size: clamp(vars.$font-title-4, 3vw, vars.$font-title-3);
+        font-size: clamp(vars.$font-title-5, 3vw, vars.$font-title-4);
     }
 
     @media (max-width: 800px) {

@@ -87,7 +87,7 @@ add_action('init', 'canvix_register_process_post_type');
 
 
 function canvix_register_projects_post_type() {
-    register_post_type('recent_projects', [
+    register_post_type('projects', [
         'labels' => [
             'name'               => 'Projets',
             'singular_name'      => 'Projet',
@@ -106,7 +106,7 @@ function canvix_register_projects_post_type() {
         'show_in_menu'       => true,
         'show_in_rest'       => true,
         'publicly_queryable' => true,
-        'has_archive'        => false,
+        'has_archive'        => true,
         'rewrite'            => [
             'slug'       => 'projects',
             'with_front' => false,
