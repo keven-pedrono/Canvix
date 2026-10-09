@@ -376,59 +376,22 @@ function canvix_theme_assets() {
     }
 }
 
-// function canvix_register_project_cpt() {
-//     register_post_type('project', [
-//         'labels' => [
-//             'name'          => 'Projets',
-//             'singular_name' => 'Projet',
-//         ],
-//         'public'       => true,
-//         'has_archive'  => true,
-//         'show_in_rest' => true,
-//         'supports'     => [
-//             'title',
-//             'editor',
-//             'thumbnail',
-//         ],
-//         'rewrite' => [
-//             'slug' => 'projects',
-//         ],
-//     ]);
-// }
+function canvix_register_project_taxonomies() {
+    register_taxonomy('category', ['projects'], [
+        'labels' => [
+            'name'          => 'Categories',
+            'singular_name' => 'Categorie',
+        ],
+        'public'       => true,
+        'hierarchical' => false,
+        'show_in_rest' => true,
+        'rewrite'      => [
+            'slug' => 'category',
+        ],
+    ]);
+}
 
-// function canvix_register_project_taxonomies() {
-//     register_taxonomy('technology', ['project'], [
-//         'labels' => [
-//             'name'          => 'Technologies',
-//             'singular_name' => 'Technologie',
-//         ],
-//         'public'       => true,
-//         'hierarchical' => false,
-//         'show_in_rest' => true,
-//         'rewrite'      => [
-//             'slug' => 'technology',
-//         ],
-//     ]);
-// }
+add_action('init', 'canvix_register_project_taxonomies');
 
-// function canvix_modify_project_archive($query) {
-//     if (
-//         ! is_admin()
-//         && $query->is_main_query()
-//         && $query->is_post_type_archive('project')
-//     ) {
-//         $query->set('posts_per_page', 2);
-//         $query->set('orderby', 'date');
-//         $query->set('order', 'DESC');
-//     }
-// }
-
-// function canvix_add_blocks() {
-//     register_block_type(get_template_directory() . '/blocks/project-meta');
-// }
 
 add_action('wp_enqueue_scripts', 'canvix_theme_assets');
-// add_action('pre_get_posts', 'canvix_modify_project_archive');
-// add_action('init', 'canvix_register_project_taxonomies');
-// add_action('init', 'canvix_register_project_cpt');
-// add_action('init', 'canvix_add_blocks');
