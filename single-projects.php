@@ -10,7 +10,7 @@
             $project_category = ($project_categories && ! is_wp_error($project_categories))
                 ? ($project_categories[0]->name ?? '')
                 : '';
-            $project_category_label = 'Category';
+            $project_category_label = 'Categorie';
 
             $project_client = function_exists('get_field')
                 ? (get_field('client_projet') ?? '')

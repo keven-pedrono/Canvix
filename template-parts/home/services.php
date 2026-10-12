@@ -39,7 +39,7 @@
                                         <h4 class="service__title"><?php echo esc_html(wp_html_excerpt($service_title, 20, '…')); ?></h4>
                                     <?php endif; ?>
 
-                                    <?php if ($service_title) : ?>
+                                    <?php if ($service_content) : ?>
                                         <p class="service__text"><?php echo esc_html(wp_html_excerpt($service_content, 170, '…')); ?></p>
                                     <?php endif; ?>
                                 </div>
