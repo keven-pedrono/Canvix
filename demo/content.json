@@ -1,0 +1,1586 @@
+{
+    "format": "canvix-demo-v1",
+    "source_url": "http://canvix.local",
+    "home_id": 18,
+    "posts": [
+        {
+            "id": 2,
+            "type": "page",
+            "slug": "about",
+            "title": "About Us",
+            "content": "<!-- wp:paragraph -->\n<p>Ceci est une page d’exemple. C’est différent d’un article de blog parce qu’elle restera au même endroit et apparaîtra dans la navigation de votre site (dans la plupart des thèmes). La plupart des gens commencent par une page «&nbsp;À propos&nbsp;» qui les présente aux personnes visitant le site. Cela pourrait ressembler à quelque chose comme cela&nbsp;:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><!-- wp:paragraph -->\n<p>Bonjour&nbsp;! Je suis un mécanicien qui aspire à devenir acteur, et voici mon site. J’habite à Bordeaux, j’ai un super chien baptisé Russell, et j’aime la vodka (ainsi qu’être surpris par la pluie soudaine lors de longues balades sur la plage au coucher du soleil).</p>\n<!-- /wp:paragraph --></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>…ou quelque chose comme cela&nbsp;:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><!-- wp:paragraph -->\n<p>La société 123 Machin Truc a été créée en 1971, et n’a cessé de proposer au public des machins-trucs de qualité depuis lors. Située à Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson, 123 Machin Truc emploie 2 000 personnes, et fabrique toutes sortes de bidules supers pour la communauté bouzemontoise.</p>\n<!-- /wp:paragraph --></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>En tant que nouvel utilisateur ou utilisatrice de WordPress, vous devriez vous rendre sur <a href=\"http://canvix.local/wp-admin/\">votre tableau de bord</a> pour supprimer cette page et créer de nouvelles pages pour votre contenu. Amusez-vous bien&nbsp;!</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p></p>\n<!-- /wp:paragraph -->",
+            "excerpt": "",
+            "date": "2026-09-27 10:07:15",
+            "menu_order": 0,
+            "parent": 0,
+            "thumbnail": 101,
+            "acf": [
+                {
+                    "key": "field_6ac5f18f06d81",
+                    "type": "text",
+                    "value": "Companies helped"
+                },
+                {
+                    "key": "field_6ac5f1de06d82",
+                    "type": "number",
+                    "value": "330"
+                },
+                {
+                    "key": "field_6ac5f20906d83",
+                    "type": "text",
+                    "value": "Revenue generated"
+                },
+                {
+                    "key": "field_6ac5f21406d84",
+                    "type": "number",
+                    "value": "230"
+                },
+                {
+                    "key": "field_6ac5f21c06d85",
+                    "type": "image",
+                    "value": "100"
+                },
+                {
+                    "key": "field_6ac5f23306d86",
+                    "type": "image",
+                    "value": "99"
+                },
+                {
+                    "key": "field_6ac5f2cf14b4b",
+                    "type": "text",
+                    "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit metus ut tortor purus tincidunt sed lectus ut eros, turpis tincidunt id."
+                },
+                {
+                    "key": "field_6ac5f3dc2ac46",
+                    "type": "text",
+                    "value": "The core mission behind all our work"
+                }
+            ],
+            "categories": []
+        },
+        {
+            "id": 10,
+            "type": "page",
+            "slug": "contact",
+            "title": "Contact",
+            "content": "",
+            "excerpt": "",
+            "date": "2026-10-06 09:04:09",
+            "menu_order": 0,
+            "parent": 0,
+            "thumbnail": 0,
+            "acf": [],
+            "categories": []
+        },
+        {
+            "id": 18,
+            "type": "page",
+            "slug": "home",
+            "title": "Accueil",
+            "content": "",
+            "excerpt": "",
+            "date": "2026-10-06 09:49:34",
+            "menu_order": 0,
+            "parent": 0,
+            "thumbnail": 48,
+            "acf": [
+                {
+                    "key": "field_6ac4a9e87078b",
+                    "type": "textarea",
+                    "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit- et ut massa libero egestas malesuada viverra gravida libero cursus nulla leo pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit-"
+                },
+                {
+                    "key": "field_6ac4a9e87078a",
+                    "type": "text",
+                    "value": "to the next level?"
+                },
+                {
+                    "key": "field_6ac4a9e97078d",
+                    "type": "text",
+                    "value": "Trusted by Leading Brands"
+                },
+                {
+                    "key": "field_6ac4b9627035f",
+                    "type": "text",
+                    "value": "Greenish"
+                },
+                {
+                    "key": "field_6ac4aa1a70790",
+                    "type": "image",
+                    "value": "44"
+                },
+                {
+                    "key": "field_6ac4aa1a70791",
+                    "type": "link",
+                    "value": ""
+                },
+                {
+                    "key": "field_6ac4a9f77078f",
+                    "type": "true_false",
+                    "value": "1"
+                },
+                {
+                    "key": "field_6ac4b97770360",
+                    "type": "text",
+                    "value": "Automation"
+                },
+                {
+                    "key": "field_6ac4aa1c70793",
+                    "type": "image",
+                    "value": "43"
+                },
+                {
+                    "key": "field_6ac4aa1c70794",
+                    "type": "link",
+                    "value": ""
+                },
+                {
+                    "key": "field_6ac4aa1a70792",
+                    "type": "true_false",
+                    "value": "1"
+                },
+                {
+                    "key": "field_6ac4b99f70361",
+                    "type": "text",
+                    "value": "Leafe"
+                },
+                {
+                    "key": "field_6ac4aa1d70796",
+                    "type": "image",
+                    "value": "42"
+                },
+                {
+                    "key": "field_6ac4aa1e70797",
+                    "type": "link",
+                    "value": ""
+                },
+                {
+                    "key": "field_6ac4aa1c70795",
+                    "type": "true_false",
+                    "value": "1"
+                },
+                {
+                    "key": "field_6ac4b9aa70362",
+                    "type": "text",
+                    "value": "Mindfulness"
+                },
+                {
+                    "key": "field_6ac4aa1e70799",
+                    "type": "image",
+                    "value": "41"
+                },
+                {
+                    "key": "field_6ac4aa1f7079a",
+                    "type": "link",
+                    "value": ""
+                },
+                {
+                    "key": "field_6ac4aa1e70798",
+                    "type": "true_false",
+                    "value": "1"
+                },
+                {
+                    "key": "field_6ac4a99670788",
+                    "type": "text",
+                    "value": "Ready to take your"
+                },
+                {
+                    "key": "field_6ac4a9e870789",
+                    "type": "text",
+                    "value": "Business Growth"
+                }
+            ],
+            "categories": []
+        },
+        {
+            "id": 70,
+            "type": "service",
+            "slug": "content-marketing",
+            "title": "Content Marketing",
+            "content": "",
+            "excerpt": "Our team creates engaging and shareable content that resonates with your audience, drives organic traffic",
+            "date": "2026-10-06 11:21:37",
+            "menu_order": 1,
+            "parent": 0,
+            "thumbnail": 86,
+            "acf": [],
+            "categories": []
+        },
+        {
+            "id": 71,
+            "type": "service",
+            "slug": "graphic-design",
+            "title": "Graphic Design",
+            "content": "",
+            "excerpt": "Unlock the power of visual storytelling with our expert graphic design services tailored to elevate your brand and captivate.",
+            "date": "2026-10-06 11:21:59",
+            "menu_order": 2,
+            "parent": 0,
+            "thumbnail": 81,
+            "acf": [],
+            "categories": []
+        },
+        {
+            "id": 72,
+            "type": "service",
+            "slug": "digital-marketing",
+            "title": "Digital Marketing",
+            "content": "",
+            "excerpt": "Elevate your brand's online presence with our data-driven digital marketing strategies. From SEO and content marketing",
+            "date": "2026-10-06 11:22:01",
+            "menu_order": 3,
+            "parent": 0,
+            "thumbnail": 80,
+            "acf": [],
+            "categories": []
+        },
+        {
+            "id": 73,
+            "type": "service",
+            "slug": "web-design",
+            "title": "Web Design",
+            "content": "",
+            "excerpt": "We specialize in creating visually stunning, user-friendly websites that align with your brand identity and deliver an exceptional.",
+            "date": "2026-10-06 11:22:02",
+            "menu_order": 4,
+            "parent": 0,
+            "thumbnail": 79,
+            "acf": [],
+            "categories": []
+        },
+        {
+            "id": 74,
+            "type": "service",
+            "slug": "it-consulting",
+            "title": "IT Consulting",
+            "content": "",
+            "excerpt": "IT consulting, or information technology consulting, refers to the practice of providing advisory and implementation services",
+            "date": "2026-10-06 11:22:03",
+            "menu_order": 5,
+            "parent": 0,
+            "thumbnail": 78,
+            "acf": [],
+            "categories": []
+        },
+        {
+            "id": 75,
+            "type": "service",
+            "slug": "brand-identity",
+            "title": "Brand Identity",
+            "content": "",
+            "excerpt": "It involves creating a unique and recognizable identity that sets the brand apart from competitors and resonates with the target audience.",
+            "date": "2026-10-06 11:22:05",
+            "menu_order": 6,
+            "parent": 0,
+            "thumbnail": 77,
+            "acf": [],
+            "categories": []
+        },
+        {
+            "id": 110,
+            "type": "process",
+            "slug": "ideate",
+            "title": "Ideate",
+            "content": "",
+            "excerpt": "The ideation process is a crucial phase in the design process where creative thinking and brainstorming",
+            "date": "2026-10-06 13:54:19",
+            "menu_order": 1,
+            "parent": 0,
+            "thumbnail": 111,
+            "acf": [],
+            "categories": []
+        },
+        {
+            "id": 115,
+            "type": "process",
+            "slug": "research",
+            "title": "Research",
+            "content": "",
+            "excerpt": "Research is a critical component of the design process, helping designers understand the problem",
+            "date": "2026-10-06 13:54:32",
+            "menu_order": 2,
+            "parent": 0,
+            "thumbnail": 112,
+            "acf": [],
+            "categories": []
+        },
+        {
+            "id": 116,
+            "type": "process",
+            "slug": "create",
+            "title": "Create",
+            "content": "",
+            "excerpt": "Designing a process involves several key steps to ensure clarity, efficiency, successfull implementation",
+            "date": "2026-10-06 13:54:33",
+            "menu_order": 3,
+            "parent": 0,
+            "thumbnail": 113,
+            "acf": [],
+            "categories": []
+        },
+        {
+            "id": 117,
+            "type": "process",
+            "slug": "testing",
+            "title": "Testing",
+            "content": "",
+            "excerpt": "Testing is a crucial phase in the design process to ensure that the product or system meets the specified requirements",
+            "date": "2026-10-06 13:54:34",
+            "menu_order": 4,
+            "parent": 0,
+            "thumbnail": 114,
+            "acf": [],
+            "categories": []
+        },
+        {
+            "id": 122,
+            "type": "projects",
+            "slug": "project-web",
+            "title": "Web UI design",
+            "content": "<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">01. The Challenge</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>When our power of choice is untrammeled and when nothing prevents us from being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:spacer {\"height\":\"73px\"} -->\n<div style=\"height:73px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">02. The Solution</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:spacer {\"height\":\"37px\"} -->\n<div style=\"height:37px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:verse -->\n<pre class=\"wp-block-verse\">One who avoids a pain that produces no resultant pleasure.<br>laborious physical exercise.<br>One who avoids a pain that produces no resultant<br>which of us ever undertakes laborious<br>Avoids pleasure itself, because it is.</pre>\n<!-- /wp:verse -->\n\n<!-- wp:spacer {\"height\":\"73px\"} -->\n<div style=\"height:73px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">03. The Result</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\"</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:spacer {\"height\":\"37px\"} -->\n<div style=\"height:37px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:paragraph -->\n<p>When our power of choice is untrammeled and when nothing prevents us from being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:spacer {\"height\":\"73px\"} -->\n<div style=\"height:73px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:gallery {\"linkTo\":\"none\"} -->\n<figure class=\"wp-block-gallery has-nested-images columns-default is-cropped\"><!-- wp:image {\"id\":202,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"http://canvix.local/wp-content/uploads/2026/10/Rectangle-37.png\" alt=\"\" class=\"wp-image-202\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:image {\"id\":201,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"http://canvix.local/wp-content/uploads/2026/10/Rectangle-38.png\" alt=\"\" class=\"wp-image-201\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:image {\"id\":200,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"http://canvix.local/wp-content/uploads/2026/10/Rectangle-39.png\" alt=\"\" class=\"wp-image-200\"/></figure>\n<!-- /wp:image --></figure>\n<!-- /wp:gallery -->",
+            "excerpt": "Creative UI design",
+            "date": "2026-10-06 14:17:40",
+            "menu_order": 1,
+            "parent": 0,
+            "thumbnail": 121,
+            "acf": [
+                {
+                    "key": "field_canvix_showcase_image",
+                    "type": "image",
+                    "value": "121"
+                },
+                {
+                    "key": "field_canvix_showcase_link",
+                    "type": "link",
+                    "value": {
+                        "title": "Web UI design",
+                        "url": "http://canvix.local/",
+                        "target": ""
+                    }
+                },
+                {
+                    "key": "field_6ac89bf87f029",
+                    "type": "date_picker",
+                    "value": "20261009"
+                },
+                {
+                    "key": "field_6ac89c3f7f02a",
+                    "type": "text",
+                    "value": "BrightMedia Solutions  "
+                },
+                {
+                    "key": "field_6ac89c517f02b",
+                    "type": "text",
+                    "value": "489 Depot Road Midland"
+                }
+            ],
+            "categories": [
+                6
+            ]
+        },
+        {
+            "id": 124,
+            "type": "projects",
+            "slug": "project-strategy",
+            "title": "To design Digital Strategy",
+            "content": "<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">01. A clearer digital direction</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Northline Studio wanted to bring its website, social channels and editorial calendar together. The challenge was to build a consistent voice while keeping enough flexibility for product launches, customer stories and everyday updates.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>We began with a detailed review of the existing customer journey. <strong>Clarity was the main priority</strong>: visitors needed to understand the offer, find relevant examples and know what to do next. We also looked at how the same message could move from a short social post to a longer landing page without losing its meaning.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:spacer {\"height\":\"40px\"} -->\n<div style=\"height:40px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">02. From research to an editorial system</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>The strategy combines three complementary themes: practical advice, stories from the team and a closer look at the work itself. Each theme has its own rhythm, but all of them share a simple vocabulary and a recognisable visual structure.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li><strong>Audit:</strong> review the content, navigation and main entry points.</li>\n<!-- /wp:list-item -->\n\n<!-- wp:list-item -->\n<li><strong>Positioning:</strong> define a clear promise and a consistent tone of voice.</li>\n<!-- /wp:list-item -->\n\n<!-- wp:list-item -->\n<li><strong>Content:</strong> prepare reusable formats for articles, campaigns and case studies.</li>\n<!-- /wp:list-item -->\n\n<!-- wp:list-item -->\n<li><strong>Measurement:</strong> choose a small set of useful signals rather than a long list of vanity metrics.</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><!-- wp:paragraph -->\n<p>A good digital strategy helps people make the next decision with confidence.</p>\n<!-- /wp:paragraph --><cite>Northline Studio — project brief</cite></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:spacer {\"height\":\"56px\"} -->\n<div style=\"height:56px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">03. A practical roadmap</h3>\n<!-- /wp:heading -->\n\n<!-- wp:list {\"ordered\":true} -->\n<ol class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Start with the pages that explain the offer and answer the most common questions.</li>\n<!-- /wp:list-item -->\n\n<!-- wp:list-item -->\n<li>Introduce a shared editorial calendar and a small library of visual templates.</li>\n<!-- /wp:list-item -->\n\n<!-- wp:list-item -->\n<li>Review the journey regularly and adjust the content using feedback from real conversations.</li>\n<!-- /wp:list-item --></ol>\n<!-- /wp:list -->\n\n<!-- wp:paragraph -->\n<p>The final deliverables include a content map, a campaign framework and a set of reusable templates. Together, they give the team a concrete starting point for future communication. The next step is to connect these materials with the <a href=\"http://canvix.local/projects/\">other projects in the portfolio</a>.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:gallery {\"columns\":2,\"linkTo\":\"none\",\"style\":{\"spacing\":{\"blockGap\":{\"top\":\"12px\",\"left\":\"12px\"}}}} -->\n<figure class=\"wp-block-gallery has-nested-images columns-2 is-cropped\"><!-- wp:image {\"id\":123,\"sizeSlug\":\"full\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-full\"><img src=\"http://canvix.local/wp-content/uploads/2026/10/project-strategy.png\" alt=\"Digital strategy presentation\" class=\"wp-image-123\"/><figcaption class=\"wp-element-caption\">An overview of the strategic direction.</figcaption></figure>\n<!-- /wp:image -->\n\n<!-- wp:image {\"id\":202,\"sizeSlug\":\"full\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-full\"><img src=\"http://canvix.local/wp-content/uploads/2026/10/Rectangle-37.png\" alt=\"Detail of a design exploration\" class=\"wp-image-202\"/><figcaption class=\"wp-element-caption\">A closer look at the visual language.</figcaption></figure>\n<!-- /wp:image --></figure>\n<!-- /wp:gallery -->\n\n<!-- wp:spacer {\"height\":\"40px\"} -->\n<div style=\"height:40px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">04. What the team can reuse</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>This project is designed around repeatable decisions. Instead of starting every campaign from a blank page, the team can choose an audience, a message and a format from a shared system. Short announcements and longer stories now follow the same logic, making it easier to keep the experience coherent across different touchpoints.</p>\n<!-- /wp:paragraph -->\n\n",
+            "excerpt": "Social Media Marketing",
+            "date": "2026-10-06 14:17:40",
+            "menu_order": 2,
+            "parent": 0,
+            "thumbnail": 123,
+            "acf": [
+                {
+                    "key": "field_canvix_showcase_image",
+                    "type": "image",
+                    "value": "123"
+                },
+                {
+                    "key": "field_canvix_showcase_link",
+                    "type": "link",
+                    "value": {
+                        "title": "To design Digital Strategy",
+                        "url": "http://canvix.local/",
+                        "target": ""
+                    }
+                },
+                {
+                    "key": "field_6ac89bf87f029",
+                    "type": "date_picker",
+                    "value": "20260318"
+                },
+                {
+                    "key": "field_6ac89c3f7f02a",
+                    "type": "text",
+                    "value": "Northline Studio"
+                },
+                {
+                    "key": "field_6ac89c517f02b",
+                    "type": "text",
+                    "value": "Nantes, France"
+                }
+            ],
+            "categories": [
+                9
+            ]
+        },
+        {
+            "id": 126,
+            "type": "projects",
+            "slug": "project-design",
+            "title": "UI Design",
+            "content": "<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">01. A compact identity refresh</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Mori Studio needed a simple visual identity for a new collection. We focused on a distinctive mark, a restrained colour palette and a small set of applications that could be used immediately.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:image {\"id\":125,\"sizeSlug\":\"full\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-full\"><img src=\"http://canvix.local/wp-content/uploads/2026/10/project-design.png\" alt=\"Visual identity exploration for Mori Studio\" class=\"wp-image-125\"/><figcaption class=\"wp-element-caption\">The main identity concept and its first applications.</figcaption></figure>\n<!-- /wp:image -->\n\n<!-- wp:spacer {\"height\":\"32px\"} -->\n<div style=\"height:32px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">02. Small details, consistent impact</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>The identity works through proportion, spacing and contrast. <em>A limited number of elements</em> makes the system easy to recognise, whether it appears on a printed card or a small digital surface.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:gallery {\"columns\":3,\"linkTo\":\"none\",\"style\":{\"spacing\":{\"blockGap\":{\"top\":\"8px\",\"left\":\"8px\"}}}} -->\n<figure class=\"wp-block-gallery has-nested-images columns-3 is-cropped\"><!-- wp:image {\"id\":202,\"sizeSlug\":\"full\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-full\"><img src=\"http://canvix.local/wp-content/uploads/2026/10/Rectangle-37.png\" alt=\"First detail from the identity system\" class=\"wp-image-202\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:image {\"id\":201,\"sizeSlug\":\"full\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-full\"><img src=\"http://canvix.local/wp-content/uploads/2026/10/Rectangle-38.png\" alt=\"Second detail from the identity system\" class=\"wp-image-201\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:image {\"id\":200,\"sizeSlug\":\"full\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-full\"><img src=\"http://canvix.local/wp-content/uploads/2026/10/Rectangle-39.png\" alt=\"Third detail from the identity system\" class=\"wp-image-200\"/></figure>\n<!-- /wp:image --></figure>\n<!-- /wp:gallery -->\n\n<!-- wp:paragraph -->\n<p>The result is a focused toolkit: one main mark, a compact palette and clear guidance for everyday use.</p>\n<!-- /wp:paragraph -->\n\n",
+            "excerpt": "Creative Rebranding for logo",
+            "date": "2026-10-06 14:17:40",
+            "menu_order": 3,
+            "parent": 0,
+            "thumbnail": 125,
+            "acf": [
+                {
+                    "key": "field_canvix_showcase_image",
+                    "type": "image",
+                    "value": "125"
+                },
+                {
+                    "key": "field_canvix_showcase_link",
+                    "type": "link",
+                    "value": {
+                        "title": "UI Design",
+                        "url": "http://canvix.local/",
+                        "target": ""
+                    }
+                },
+                {
+                    "key": "field_6ac89bf87f029",
+                    "type": "date_picker",
+                    "value": "20260709"
+                },
+                {
+                    "key": "field_6ac89c3f7f02a",
+                    "type": "text",
+                    "value": "Mori Studio"
+                },
+                {
+                    "key": "field_6ac89c517f02b",
+                    "type": "text",
+                    "value": ""
+                }
+            ],
+            "categories": [
+                10
+            ]
+        },
+        {
+            "id": 128,
+            "type": "projects",
+            "slug": "project-ui",
+            "title": "UI Design",
+            "content": "<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">01. Making a complex workspace easier to navigate</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Atelier Horizon is a demonstration of a workspace where several teams collaborate on the same projects. The interface brings together planning, project information and shared resources without asking users to switch constantly between unrelated screens.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>The challenge was to handle both quick visits and longer working sessions. Someone checking a deadline should find it immediately; someone preparing a review needs more detail. We designed a hierarchy that supports both situations, with concise summaries at the top and progressive access to the supporting information.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:spacer {\"height\":\"48px\"} -->\n<div style=\"height:48px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">02. Two complementary perspectives</h3>\n<!-- /wp:heading -->\n\n<!-- wp:columns -->\n<div class=\"wp-block-columns\"><!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:heading {\"level\":4} -->\n<h4 class=\"wp-block-heading\">For the project team</h4>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>A clear overview highlights the next action, the current status and the person responsible. Longer descriptions remain available without making the first screen difficult to scan.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Find current tasks quickly.</li>\n<!-- /wp:list-item -->\n\n<!-- wp:list-item -->\n<li>Read the context before making a decision.</li>\n<!-- /wp:list-item -->\n\n<!-- wp:list-item -->\n<li>Keep shared information in one place.</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:heading {\"level\":4} -->\n<h4 class=\"wp-block-heading\">For the reviewer</h4>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>A dedicated review path gathers the objectives, key screens and open questions. The structure also accommodates a much longer comment, so the team can document edge cases without shortening an explanation that needs context.</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns -->\n\n<!-- wp:spacer {\"height\":\"48px\"} -->\n<div style=\"height:48px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">03. One interface, several image formats</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>The following gallery combines landscape views and more compact details. It keeps the original image proportions and uses wider spacing so that each screen can be read separately. Captions provide a second level of information when a visual needs context.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:gallery {\"columns\":3,\"linkTo\":\"none\",\"style\":{\"spacing\":{\"blockGap\":{\"top\":\"32px\",\"left\":\"32px\"}}},\"imageCrop\":false} -->\n<figure class=\"wp-block-gallery has-nested-images columns-3\"><!-- wp:image {\"id\":127,\"sizeSlug\":\"full\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-full\"><img src=\"http://canvix.local/wp-content/uploads/2026/10/project-ui.png\" alt=\"Main workspace interface\" class=\"wp-image-127\"/><figcaption class=\"wp-element-caption\">The main workspace and navigation.</figcaption></figure>\n<!-- /wp:image -->\n\n<!-- wp:image {\"id\":125,\"sizeSlug\":\"full\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-full\"><img src=\"http://canvix.local/wp-content/uploads/2026/10/project-design.png\" alt=\"Visual system applied to a secondary screen\" class=\"wp-image-125\"/><figcaption class=\"wp-element-caption\">A secondary view using the same visual system.</figcaption></figure>\n<!-- /wp:image -->\n\n<!-- wp:image {\"id\":202,\"sizeSlug\":\"full\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-full\"><img src=\"http://canvix.local/wp-content/uploads/2026/10/Rectangle-37.png\" alt=\"Close-up of an interface component\" class=\"wp-image-202\"/><figcaption class=\"wp-element-caption\">A compact component detail.</figcaption></figure>\n<!-- /wp:image -->\n\n<!-- wp:image {\"id\":201,\"sizeSlug\":\"full\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-full\"><img src=\"http://canvix.local/wp-content/uploads/2026/10/Rectangle-38.png\" alt=\"Alternate interface composition\" class=\"wp-image-201\"/><figcaption class=\"wp-element-caption\">A second composition.</figcaption></figure>\n<!-- /wp:image -->\n\n<!-- wp:image {\"id\":200,\"sizeSlug\":\"full\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-full\"><img src=\"http://canvix.local/wp-content/uploads/2026/10/Rectangle-39.png\" alt=\"Final interface detail\" class=\"wp-image-200\"/><figcaption class=\"wp-element-caption\">The last detail in the gallery.</figcaption></figure>\n<!-- /wp:image --></figure>\n<!-- /wp:gallery -->\n\n<!-- wp:spacer {\"height\":\"56px\"} -->\n<div style=\"height:56px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">04. A delivery that supports future iterations</h3>\n<!-- /wp:heading -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><!-- wp:paragraph -->\n<p>The interface should remain understandable when the project becomes more complex, not only when the screen is almost empty.</p>\n<!-- /wp:paragraph --><cite>Atelier Horizon — design principle</cite></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:table -->\n<figure class=\"wp-block-table\"><table class=\"has-fixed-layout\"><thead><tr><th>Area</th><th>Deliverable</th><th>Purpose</th></tr></thead><tbody><tr><td>Navigation</td><td>Screen map</td><td>Make the main paths easy to understand.</td></tr><tr><td>Components</td><td>Reusable interface library</td><td>Keep repeated actions consistent.</td></tr><tr><td>Content</td><td>Labels and empty states</td><td>Explain what users can do next.</td></tr></tbody></table></figure>\n<!-- /wp:table -->\n\n<!-- wp:paragraph -->\n<p>The handover includes the main screens, their component states and notes about content behaviour. The documentation covers short labels, longer explanations and incomplete information, giving future contributors a practical way to extend the interface without rebuilding its foundations.</p>\n<!-- /wp:paragraph -->\n\n",
+            "excerpt": "Creative Rebranding for logo",
+            "date": "2026-10-06 14:17:40",
+            "menu_order": 4,
+            "parent": 0,
+            "thumbnail": 127,
+            "acf": [
+                {
+                    "key": "field_canvix_showcase_image",
+                    "type": "image",
+                    "value": "127"
+                },
+                {
+                    "key": "field_canvix_showcase_link",
+                    "type": "link",
+                    "value": {
+                        "title": "UI Design",
+                        "url": "http://canvix.local/",
+                        "target": ""
+                    }
+                },
+                {
+                    "key": "field_6ac89bf87f029",
+                    "type": "date_picker",
+                    "value": "20260902"
+                },
+                {
+                    "key": "field_6ac89c3f7f02a",
+                    "type": "text",
+                    "value": "Atelier Horizon — Digital Products & Collaborative Experiences"
+                },
+                {
+                    "key": "field_6ac89c517f02b",
+                    "type": "text",
+                    "value": "Paris, France — collaboration avec une équipe internationale à distance"
+                }
+            ],
+            "categories": [
+                11
+            ]
+        },
+        {
+            "id": 135,
+            "type": "testimonial",
+            "slug": "jacqueline-miller",
+            "title": "Jacqueline Miller",
+            "content": "Be genuine in your assessment, and provide constructive feedback to benefit both potential customers and the company providing the product or service.",
+            "excerpt": "The final result exceeded our expectations and gave our brand the confidence and consistency it was missing.",
+            "date": "2026-10-06 14:58:38",
+            "menu_order": 0,
+            "parent": 0,
+            "thumbnail": 121,
+            "acf": [
+                {
+                    "key": "field_canvix_testimonial_position",
+                    "type": "text",
+                    "value": "CEO of an eduport"
+                }
+            ],
+            "categories": []
+        },
+        {
+            "id": 136,
+            "type": "testimonial",
+            "slug": "thomas-bernard",
+            "title": "Thomas Bernard",
+            "content": "The team transformed our initial ideas into a clear, polished identity that feels completely aligned with our ambitions.",
+            "excerpt": "The final result exceeded our expectations and gave our brand the confidence and consistency it was missing.",
+            "date": "2026-10-06 14:59:38",
+            "menu_order": 0,
+            "parent": 0,
+            "thumbnail": 123,
+            "acf": [
+                {
+                    "key": "field_canvix_testimonial_position",
+                    "type": "text",
+                    "value": "Creative Director"
+                }
+            ],
+            "categories": []
+        },
+        {
+            "id": 137,
+            "type": "testimonial",
+            "slug": "sophie-laurent",
+            "title": "Sophie Laurent",
+            "content": "Every stage of the project was handled with care, clarity and a real understanding of our audience.",
+            "excerpt": "The final result exceeded our expectations and gave our brand the confidence and consistency it was missing.",
+            "date": "2026-10-06 15:00:38",
+            "menu_order": 0,
+            "parent": 0,
+            "thumbnail": 125,
+            "acf": [
+                {
+                    "key": "field_canvix_testimonial_position",
+                    "type": "text",
+                    "value": "Marketing Manager"
+                }
+            ],
+            "categories": []
+        },
+        {
+            "id": 138,
+            "type": "testimonial",
+            "slug": "nicolas-robert",
+            "title": "Nicolas Robert",
+            "content": "Canvix brought fresh thinking to the project and delivered an experience that is both beautiful and easy to use.",
+            "excerpt": "The final result exceeded our expectations and gave our brand the confidence and consistency it was missing.",
+            "date": "2026-10-06 15:01:38",
+            "menu_order": 0,
+            "parent": 0,
+            "thumbnail": 127,
+            "acf": [
+                {
+                    "key": "field_canvix_testimonial_position",
+                    "type": "text",
+                    "value": "Founder of Studio Nova"
+                }
+            ],
+            "categories": []
+        },
+        {
+            "id": 139,
+            "type": "testimonial",
+            "slug": "emma-dubois",
+            "title": "Emma Dubois",
+            "content": "<!-- wp:paragraph -->\n<p><strong>The final result exceeded our expectations and gave our brand the confidence and consistency it was missing.</strong></p>\n<!-- /wp:paragraph -->",
+            "excerpt": "Be genuine in your assessment, and provide constructive feedback to benefit both potential customers and the company providing the product or service.",
+            "date": "2026-10-06 15:02:38",
+            "menu_order": 0,
+            "parent": 0,
+            "thumbnail": 0,
+            "acf": [
+                {
+                    "key": "field_canvix_testimonial_position",
+                    "type": "text",
+                    "value": "Product Lead"
+                }
+            ],
+            "categories": []
+        }
+    ],
+    "media": [
+        {
+            "id": 41,
+            "slug": "partner-mindfulness",
+            "title": "partner-mindfulness",
+            "caption": "",
+            "alt": "",
+            "parent": 18,
+            "mime": "image/png",
+            "file": "2026/10/mindfulness.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/mindfulness.png",
+            "metadata": {
+                "width": 185,
+                "height": 34,
+                "file": "2026/10/mindfulness.png",
+                "filesize": 2311,
+                "sizes": {
+                    "thumbnail": {
+                        "file": "mindfulness-150x34.png",
+                        "width": 150,
+                        "height": 34,
+                        "mime-type": "image/png",
+                        "filesize": 1452
+                    }
+                },
+                "image_meta": []
+            }
+        },
+        {
+            "id": 42,
+            "slug": "partner-leafe",
+            "title": "partner-leafe",
+            "caption": "",
+            "alt": "",
+            "parent": 18,
+            "mime": "image/png",
+            "file": "2026/10/leafe.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/leafe.png",
+            "metadata": {
+                "width": 106,
+                "height": 33,
+                "file": "2026/10/leafe.png",
+                "filesize": 1700,
+                "sizes": [],
+                "image_meta": []
+            }
+        },
+        {
+            "id": 43,
+            "slug": "partner-automation",
+            "title": "partner-automation",
+            "caption": "",
+            "alt": "",
+            "parent": 18,
+            "mime": "image/png",
+            "file": "2026/10/automation.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/automation.png",
+            "metadata": {
+                "width": 120,
+                "height": 30,
+                "file": "2026/10/automation.png",
+                "filesize": 1472,
+                "sizes": [],
+                "image_meta": []
+            }
+        },
+        {
+            "id": 44,
+            "slug": "partner-greenish",
+            "title": "partner-greenish",
+            "caption": "",
+            "alt": "",
+            "parent": 18,
+            "mime": "image/png",
+            "file": "2026/10/greenish.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/greenish.png",
+            "metadata": {
+                "width": 115,
+                "height": 21,
+                "file": "2026/10/greenish.png",
+                "filesize": 1595,
+                "sizes": [],
+                "image_meta": []
+            }
+        },
+        {
+            "id": 48,
+            "slug": "hero-illustration",
+            "title": "hero-illustration",
+            "caption": "",
+            "alt": "",
+            "parent": 18,
+            "mime": "image/png",
+            "file": "2026/10/hero-illustration.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/hero-illustration.png",
+            "metadata": {
+                "width": 1100,
+                "height": 1100,
+                "file": "2026/10/hero-illustration.png",
+                "filesize": 1254680,
+                "sizes": {
+                    "medium": {
+                        "file": "hero-illustration-300x300.png",
+                        "width": 300,
+                        "height": 300,
+                        "mime-type": "image/png",
+                        "filesize": 120094
+                    },
+                    "large": {
+                        "file": "hero-illustration-1024x1024.png",
+                        "width": 1024,
+                        "height": 1024,
+                        "mime-type": "image/png",
+                        "filesize": 975691
+                    },
+                    "thumbnail": {
+                        "file": "hero-illustration-150x150.png",
+                        "width": 150,
+                        "height": 150,
+                        "mime-type": "image/png",
+                        "filesize": 37619
+                    },
+                    "medium_large": {
+                        "file": "hero-illustration-768x768.png",
+                        "width": 768,
+                        "height": 768,
+                        "mime-type": "image/png",
+                        "filesize": 600653
+                    }
+                },
+                "image_meta": []
+            }
+        },
+        {
+            "id": 77,
+            "slug": "diamond",
+            "title": "service-diamond",
+            "caption": "",
+            "alt": "",
+            "parent": 75,
+            "mime": "image/png",
+            "file": "2026/10/diamond.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/diamond.png",
+            "metadata": {
+                "width": 34,
+                "height": 32,
+                "file": "2026/10/diamond.png",
+                "filesize": 639,
+                "sizes": [],
+                "image_meta": []
+            }
+        },
+        {
+            "id": 78,
+            "slug": "people",
+            "title": "service-people",
+            "caption": "",
+            "alt": "",
+            "parent": 74,
+            "mime": "image/png",
+            "file": "2026/10/people.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/people.png",
+            "metadata": {
+                "width": 32,
+                "height": 33,
+                "file": "2026/10/people.png",
+                "filesize": 747,
+                "sizes": [],
+                "image_meta": []
+            }
+        },
+        {
+            "id": 79,
+            "slug": "paint",
+            "title": "service-paint",
+            "caption": "",
+            "alt": "",
+            "parent": 73,
+            "mime": "image/png",
+            "file": "2026/10/paint.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/paint.png",
+            "metadata": {
+                "width": 35,
+                "height": 35,
+                "file": "2026/10/paint.png",
+                "filesize": 982,
+                "sizes": [],
+                "image_meta": []
+            }
+        },
+        {
+            "id": 80,
+            "slug": "speaker",
+            "title": "service-speaker",
+            "caption": "",
+            "alt": "",
+            "parent": 72,
+            "mime": "image/png",
+            "file": "2026/10/speaker.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/speaker.png",
+            "metadata": {
+                "width": 35,
+                "height": 35,
+                "file": "2026/10/speaker.png",
+                "filesize": 895,
+                "sizes": [],
+                "image_meta": []
+            }
+        },
+        {
+            "id": 81,
+            "slug": "ink",
+            "title": "service-ink",
+            "caption": "",
+            "alt": "",
+            "parent": 71,
+            "mime": "image/png",
+            "file": "2026/10/ink.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/ink.png",
+            "metadata": {
+                "width": 34,
+                "height": 34,
+                "file": "2026/10/ink.png",
+                "filesize": 828,
+                "sizes": [],
+                "image_meta": []
+            }
+        },
+        {
+            "id": 86,
+            "slug": "pencill",
+            "title": "service-pencill",
+            "caption": "",
+            "alt": "",
+            "parent": 75,
+            "mime": "image/png",
+            "file": "2026/10/pencill.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/pencill.png",
+            "metadata": {
+                "width": 31,
+                "height": 31,
+                "file": "2026/10/pencill.png",
+                "filesize": 473,
+                "sizes": [],
+                "image_meta": []
+            }
+        },
+        {
+            "id": 99,
+            "slug": "about-illustration-1",
+            "title": "about-illustration-1",
+            "caption": "",
+            "alt": "",
+            "parent": 18,
+            "mime": "image/png",
+            "file": "2026/10/about-illustration-1.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/about-illustration-1.png",
+            "metadata": {
+                "width": 640,
+                "height": 640,
+                "file": "2026/10/about-illustration-1.png",
+                "filesize": 445095,
+                "sizes": {
+                    "medium": {
+                        "file": "about-illustration-1-300x300.png",
+                        "width": 300,
+                        "height": 300,
+                        "mime-type": "image/png",
+                        "filesize": 119332
+                    },
+                    "thumbnail": {
+                        "file": "about-illustration-1-150x150.png",
+                        "width": 150,
+                        "height": 150,
+                        "mime-type": "image/png",
+                        "filesize": 36223
+                    }
+                },
+                "image_meta": []
+            }
+        },
+        {
+            "id": 100,
+            "slug": "about-illustration-2",
+            "title": "about-illustration-2",
+            "caption": "",
+            "alt": "",
+            "parent": 18,
+            "mime": "image/png",
+            "file": "2026/10/about-illustration-2.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/about-illustration-2.png",
+            "metadata": {
+                "width": 640,
+                "height": 640,
+                "file": "2026/10/about-illustration-2.png",
+                "filesize": 673172,
+                "sizes": {
+                    "medium": {
+                        "file": "about-illustration-2-300x300.png",
+                        "width": 300,
+                        "height": 300,
+                        "mime-type": "image/png",
+                        "filesize": 145574
+                    },
+                    "thumbnail": {
+                        "file": "about-illustration-2-150x150.png",
+                        "width": 150,
+                        "height": 150,
+                        "mime-type": "image/png",
+                        "filesize": 41302
+                    }
+                },
+                "image_meta": []
+            }
+        },
+        {
+            "id": 101,
+            "slug": "about-illustration-3",
+            "title": "about-illustration-3",
+            "caption": "",
+            "alt": "",
+            "parent": 18,
+            "mime": "image/png",
+            "file": "2026/10/about-illustration-3.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/about-illustration-3.png",
+            "metadata": {
+                "width": 640,
+                "height": 640,
+                "file": "2026/10/about-illustration-3.png",
+                "filesize": 795735,
+                "sizes": {
+                    "medium": {
+                        "file": "about-illustration-3-300x300.png",
+                        "width": 300,
+                        "height": 300,
+                        "mime-type": "image/png",
+                        "filesize": 154185
+                    },
+                    "thumbnail": {
+                        "file": "about-illustration-3-150x150.png",
+                        "width": 150,
+                        "height": 150,
+                        "mime-type": "image/png",
+                        "filesize": 44768
+                    }
+                },
+                "image_meta": []
+            }
+        },
+        {
+            "id": 111,
+            "slug": "process-ideate",
+            "title": "process-ideate",
+            "caption": "",
+            "alt": "",
+            "parent": 110,
+            "mime": "image/png",
+            "file": "2026/10/process-ideate.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/process-ideate.png",
+            "metadata": {
+                "width": 70,
+                "height": 70,
+                "file": "2026/10/process-ideate.png",
+                "filesize": 864,
+                "sizes": [],
+                "image_meta": []
+            }
+        },
+        {
+            "id": 112,
+            "slug": "process-research",
+            "title": "process-research",
+            "caption": "",
+            "alt": "",
+            "parent": 110,
+            "mime": "image/png",
+            "file": "2026/10/process-research.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/process-research.png",
+            "metadata": {
+                "width": 70,
+                "height": 70,
+                "file": "2026/10/process-research.png",
+                "filesize": 736,
+                "sizes": [],
+                "image_meta": []
+            }
+        },
+        {
+            "id": 113,
+            "slug": "process-create",
+            "title": "process-create",
+            "caption": "",
+            "alt": "",
+            "parent": 110,
+            "mime": "image/png",
+            "file": "2026/10/process-create.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/process-create.png",
+            "metadata": {
+                "width": 70,
+                "height": 70,
+                "file": "2026/10/process-create.png",
+                "filesize": 729,
+                "sizes": [],
+                "image_meta": []
+            }
+        },
+        {
+            "id": 114,
+            "slug": "process-testing",
+            "title": "process-testing",
+            "caption": "",
+            "alt": "",
+            "parent": 110,
+            "mime": "image/png",
+            "file": "2026/10/process-testing.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/process-testing.png",
+            "metadata": {
+                "width": 70,
+                "height": 70,
+                "file": "2026/10/process-testing.png",
+                "filesize": 827,
+                "sizes": [],
+                "image_meta": []
+            }
+        },
+        {
+            "id": 121,
+            "slug": "project-1",
+            "title": "project-1",
+            "caption": "",
+            "alt": "",
+            "parent": 122,
+            "mime": "image/png",
+            "file": "2026/10/project-web.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/project-web.png",
+            "metadata": {
+                "width": 663,
+                "height": 450,
+                "file": "2026/10/project-web.png",
+                "filesize": 407217,
+                "sizes": {
+                    "medium": {
+                        "file": "project-web-300x204.png",
+                        "width": 300,
+                        "height": 204,
+                        "mime-type": "image/png",
+                        "filesize": 88653
+                    },
+                    "thumbnail": {
+                        "file": "project-web-150x150.png",
+                        "width": 150,
+                        "height": 150,
+                        "mime-type": "image/png",
+                        "filesize": 39474
+                    }
+                },
+                "image_meta": []
+            }
+        },
+        {
+            "id": 123,
+            "slug": "project-2",
+            "title": "project-2",
+            "caption": "",
+            "alt": "",
+            "parent": 124,
+            "mime": "image/png",
+            "file": "2026/10/project-strategy.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/project-strategy.png",
+            "metadata": {
+                "width": 663,
+                "height": 450,
+                "file": "2026/10/project-strategy.png",
+                "filesize": 259846,
+                "sizes": {
+                    "medium": {
+                        "file": "project-strategy-300x204.png",
+                        "width": 300,
+                        "height": 204,
+                        "mime-type": "image/png",
+                        "filesize": 54389
+                    },
+                    "thumbnail": {
+                        "file": "project-strategy-150x150.png",
+                        "width": 150,
+                        "height": 150,
+                        "mime-type": "image/png",
+                        "filesize": 24349
+                    }
+                },
+                "image_meta": []
+            }
+        },
+        {
+            "id": 125,
+            "slug": "project-3",
+            "title": "project-3",
+            "caption": "",
+            "alt": "",
+            "parent": 126,
+            "mime": "image/png",
+            "file": "2026/10/project-design.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/project-design.png",
+            "metadata": {
+                "width": 664,
+                "height": 450,
+                "file": "2026/10/project-design.png",
+                "filesize": 401173,
+                "sizes": {
+                    "medium": {
+                        "file": "project-design-300x203.png",
+                        "width": 300,
+                        "height": 203,
+                        "mime-type": "image/png",
+                        "filesize": 72530
+                    },
+                    "thumbnail": {
+                        "file": "project-design-150x150.png",
+                        "width": 150,
+                        "height": 150,
+                        "mime-type": "image/png",
+                        "filesize": 34758
+                    }
+                },
+                "image_meta": []
+            }
+        },
+        {
+            "id": 127,
+            "slug": "project-4",
+            "title": "project-4",
+            "caption": "",
+            "alt": "",
+            "parent": 128,
+            "mime": "image/png",
+            "file": "2026/10/project-ui.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/project-ui.png",
+            "metadata": {
+                "width": 663,
+                "height": 450,
+                "file": "2026/10/project-ui.png",
+                "filesize": 454922,
+                "sizes": {
+                    "medium": {
+                        "file": "project-ui-300x204.png",
+                        "width": 300,
+                        "height": 204,
+                        "mime-type": "image/png",
+                        "filesize": 89243
+                    },
+                    "thumbnail": {
+                        "file": "project-ui-150x150.png",
+                        "width": 150,
+                        "height": 150,
+                        "mime-type": "image/png",
+                        "filesize": 43238
+                    }
+                },
+                "image_meta": []
+            }
+        },
+        {
+            "id": 160,
+            "slug": "logo-noir",
+            "title": "logo-black",
+            "caption": "",
+            "alt": "",
+            "parent": 0,
+            "mime": "image/png",
+            "file": "2026/10/logo-noir.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/logo-noir.png",
+            "metadata": {
+                "width": 41,
+                "height": 40,
+                "file": "2026/10/logo-noir.png",
+                "filesize": 1366,
+                "sizes": [],
+                "image_meta": []
+            }
+        },
+        {
+            "id": 166,
+            "slug": "logo-blanc",
+            "title": "logo-white",
+            "caption": "",
+            "alt": "",
+            "parent": 0,
+            "mime": "image/png",
+            "file": "2026/10/logo-blanc.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/logo-blanc.png",
+            "metadata": {
+                "width": 53,
+                "height": 52,
+                "file": "2026/10/logo-blanc.png",
+                "filesize": 1209,
+                "sizes": [],
+                "image_meta": []
+            }
+        },
+        {
+            "id": 200,
+            "slug": "illustration-1",
+            "title": "illustration-1",
+            "caption": "",
+            "alt": "",
+            "parent": 122,
+            "mime": "image/png",
+            "file": "2026/10/Rectangle-39.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/Rectangle-39.png",
+            "metadata": {
+                "width": 418,
+                "height": 400,
+                "file": "2026/10/Rectangle-39.png",
+                "filesize": 266766,
+                "sizes": {
+                    "medium": {
+                        "file": "Rectangle-39-300x287.png",
+                        "width": 300,
+                        "height": 287,
+                        "mime-type": "image/png",
+                        "filesize": 120767
+                    },
+                    "thumbnail": {
+                        "file": "Rectangle-39-150x150.png",
+                        "width": 150,
+                        "height": 150,
+                        "mime-type": "image/png",
+                        "filesize": 36607
+                    }
+                },
+                "image_meta": []
+            }
+        },
+        {
+            "id": 201,
+            "slug": "illustration-2",
+            "title": "illustration-2",
+            "caption": "",
+            "alt": "",
+            "parent": 122,
+            "mime": "image/png",
+            "file": "2026/10/Rectangle-38.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/Rectangle-38.png",
+            "metadata": {
+                "width": 418,
+                "height": 400,
+                "file": "2026/10/Rectangle-38.png",
+                "filesize": 169446,
+                "sizes": {
+                    "medium": {
+                        "file": "Rectangle-38-300x287.png",
+                        "width": 300,
+                        "height": 287,
+                        "mime-type": "image/png",
+                        "filesize": 80346
+                    },
+                    "thumbnail": {
+                        "file": "Rectangle-38-150x150.png",
+                        "width": 150,
+                        "height": 150,
+                        "mime-type": "image/png",
+                        "filesize": 26357
+                    }
+                },
+                "image_meta": []
+            }
+        },
+        {
+            "id": 202,
+            "slug": "illustration-3",
+            "title": "illustration-3",
+            "caption": "",
+            "alt": "",
+            "parent": 122,
+            "mime": "image/png",
+            "file": "2026/10/Rectangle-37.png",
+            "url": "http://canvix.local/wp-content/uploads/2026/10/Rectangle-37.png",
+            "metadata": {
+                "width": 418,
+                "height": 400,
+                "file": "2026/10/Rectangle-37.png",
+                "filesize": 242124,
+                "sizes": {
+                    "medium": {
+                        "file": "Rectangle-37-300x287.png",
+                        "width": 300,
+                        "height": 287,
+                        "mime-type": "image/png",
+                        "filesize": 91822
+                    },
+                    "thumbnail": {
+                        "file": "Rectangle-37-150x150.png",
+                        "width": 150,
+                        "height": 150,
+                        "mime-type": "image/png",
+                        "filesize": 26356
+                    }
+                },
+                "image_meta": []
+            }
+        }
+    ],
+    "categories": [
+        {
+            "id": 10,
+            "name": "Brand Identity",
+            "slug": "brand-identity",
+            "parent": 0
+        },
+        {
+            "id": 6,
+            "name": "Cloud",
+            "slug": "cloud",
+            "parent": 0
+        },
+        {
+            "id": 9,
+            "name": "Digital Strategy",
+            "slug": "digital-strategy",
+            "parent": 0
+        },
+        {
+            "id": 8,
+            "name": "Infrastructure",
+            "slug": "infrastructure",
+            "parent": 0
+        },
+        {
+            "id": 1,
+            "name": "Non classé",
+            "slug": "non-classe",
+            "parent": 0
+        },
+        {
+            "id": 11,
+            "name": "Product Design",
+            "slug": "product-design",
+            "parent": 0
+        },
+        {
+            "id": 7,
+            "name": "Site web",
+            "slug": "website",
+            "parent": 0
+        }
+    ],
+    "menus": [
+        {
+            "location": "primary",
+            "name": "Menu principal",
+            "items": [
+                {
+                    "id": 6,
+                    "title": "Home",
+                    "type": "custom",
+                    "object": "custom",
+                    "object_id": 6,
+                    "url": "/",
+                    "parent": 0,
+                    "order": 1,
+                    "target": "",
+                    "classes": []
+                },
+                {
+                    "id": 15,
+                    "title": "About Us",
+                    "type": "post_type",
+                    "object": "page",
+                    "object_id": 2,
+                    "url": "http://canvix.local/about/",
+                    "parent": 0,
+                    "order": 2,
+                    "target": "",
+                    "classes": []
+                },
+                {
+                    "id": 205,
+                    "title": "Projects",
+                    "type": "post_type_archive",
+                    "object": "projects",
+                    "object_id": -12,
+                    "url": "http://canvix.local/projects/",
+                    "parent": 0,
+                    "order": 3,
+                    "target": "",
+                    "classes": []
+                }
+            ]
+        },
+        {
+            "location": "footer_pages",
+            "name": "Pages",
+            "items": [
+                {
+                    "id": 178,
+                    "title": "Home",
+                    "type": "custom",
+                    "object": "custom",
+                    "object_id": 178,
+                    "url": "https://www.google.com/",
+                    "parent": 0,
+                    "order": 1,
+                    "target": "",
+                    "classes": []
+                },
+                {
+                    "id": 179,
+                    "title": "Home 2",
+                    "type": "custom",
+                    "object": "custom",
+                    "object_id": 179,
+                    "url": "https://www.google.com/",
+                    "parent": 0,
+                    "order": 2,
+                    "target": "",
+                    "classes": []
+                },
+                {
+                    "id": 180,
+                    "title": "About",
+                    "type": "custom",
+                    "object": "custom",
+                    "object_id": 180,
+                    "url": "https://www.google.com/",
+                    "parent": 0,
+                    "order": 3,
+                    "target": "",
+                    "classes": []
+                },
+                {
+                    "id": 181,
+                    "title": "Contact Us",
+                    "type": "custom",
+                    "object": "custom",
+                    "object_id": 181,
+                    "url": "https://www.google.com/",
+                    "parent": 0,
+                    "order": 4,
+                    "target": "",
+                    "classes": []
+                },
+                {
+                    "id": 182,
+                    "title": "Portfolio",
+                    "type": "custom",
+                    "object": "custom",
+                    "object_id": 182,
+                    "url": "https://www.google.com/",
+                    "parent": 0,
+                    "order": 5,
+                    "target": "",
+                    "classes": []
+                },
+                {
+                    "id": 183,
+                    "title": "Portfolio Single",
+                    "type": "custom",
+                    "object": "custom",
+                    "object_id": 183,
+                    "url": "https://www.google.com/",
+                    "parent": 0,
+                    "order": 6,
+                    "target": "",
+                    "classes": []
+                }
+            ]
+        },
+        {
+            "location": "footer_utilities",
+            "name": "Utilities Pages",
+            "items": [
+                {
+                    "id": 184,
+                    "title": "Style Guide",
+                    "type": "custom",
+                    "object": "custom",
+                    "object_id": 184,
+                    "url": "https://www.google.com/",
+                    "parent": 0,
+                    "order": 1,
+                    "target": "",
+                    "classes": []
+                },
+                {
+                    "id": 185,
+                    "title": "Instruction",
+                    "type": "custom",
+                    "object": "custom",
+                    "object_id": 185,
+                    "url": "https://www.google.com/",
+                    "parent": 0,
+                    "order": 2,
+                    "target": "",
+                    "classes": []
+                },
+                {
+                    "id": 186,
+                    "title": "Licence",
+                    "type": "custom",
+                    "object": "custom",
+                    "object_id": 186,
+                    "url": "https://www.google.com/",
+                    "parent": 0,
+                    "order": 3,
+                    "target": "",
+                    "classes": []
+                },
+                {
+                    "id": 187,
+                    "title": "Changelog",
+                    "type": "custom",
+                    "object": "custom",
+                    "object_id": 187,
+                    "url": "https://www.google.com/",
+                    "parent": 0,
+                    "order": 4,
+                    "target": "",
+                    "classes": []
+                },
+                {
+                    "id": 188,
+                    "title": "Error 404",
+                    "type": "custom",
+                    "object": "custom",
+                    "object_id": 188,
+                    "url": "https://www.google.com/",
+                    "parent": 0,
+                    "order": 5,
+                    "target": "",
+                    "classes": []
+                },
+                {
+                    "id": 189,
+                    "title": "Password Protected",
+                    "type": "custom",
+                    "object": "custom",
+                    "object_id": 189,
+                    "url": "https://www.google.com/",
+                    "parent": 0,
+                    "order": 6,
+                    "target": "",
+                    "classes": []
+                }
+            ]
+        }
+    ],
+    "theme_mods": {
+        "canvix_header_cta_label": "Get in touch",
+        "custom_logo": 166,
+        "canvix_h_cta_label": "Start your Free Trial",
+        "canvix_home_cta_label": "Start your Free Trial",
+        "canvix_footer_excerpt": "We’re a team of strategic creator and digital innovator, united focus in our pursuit of mastery and joyful.",
+        "canvix_footer_copyright": "Iconstica.com",
+        "canvix_footer_address": "119 Tanglewood Lane Gulfport, MS 39503",
+        "canvix_footer_phone": "+0 12 457 4578",
+        "canvix_footer_facebook_url": "https://www.facebook.com",
+        "canvix_footer_instagram_url": "https://www.instagram.com",
+        "canvix_footer_linkedin_url": "https://www.linkedin.com",
+        "canvix_home_cta_url": "http://canvix.local/projects"
+    },
+    "options": {
+        "blogname": "Canvix",
+        "blogdescription": "",
+        "permalink_structure": "/%postname%/",
+        "posts_per_page": "10"
+    }
+}
